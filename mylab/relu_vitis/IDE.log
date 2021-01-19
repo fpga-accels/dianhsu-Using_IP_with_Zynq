@@ -1,0 +1,139 @@
+23:33:24 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\dianhsu\Desktop\Using_IP_with_Zynq\mylab\relu_vitis\temp_xsdb_launch_script.tcl
+23:33:24 INFO  : Registering command handlers for Vitis TCF services
+23:33:26 INFO  : XSCT server has started successfully.
+23:33:26 INFO  : Platform repository initialization has completed.
+23:33:26 INFO  : Successfully done setting XSCT server connection channel  
+23:33:26 INFO  : plnx-install-location is set to ''
+23:33:26 INFO  : Successfully done query RDI_DATADIR 
+23:33:26 INFO  : Successfully done setting workspace for the tool. 
+23:34:02 INFO  : Result from executing command 'getProjects': zed_hw
+23:34:02 INFO  : Result from executing command 'getPlatforms': 
+23:35:24 INFO  : Result from executing command 'getProjects': zed_hw
+23:35:24 INFO  : Result from executing command 'getPlatforms': zed_hw|C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vitis/zed_hw/export/zed_hw/zed_hw.xpfm
+23:36:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:36:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248774077" && level==0 && jtag_device_ctx=="jsn-Zed-210248774077-23727093-0"}' command is executed.
+23:36:21 INFO  : Device configured successfully with "C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vitis/test_relu/_ide/bitstream/relu_bd_wrapper.bit"
+23:36:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:36:33 INFO  : Jtag cable 'Digilent Zed 210248774077' is selected.
+23:36:33 INFO  : 'jtag frequency' command is executed.
+23:36:33 INFO  : Context for 'APU' is selected.
+23:36:33 INFO  : System reset is completed.
+23:36:36 INFO  : 'after 3000' command is executed.
+23:36:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248774077" && level==0 && jtag_device_ctx=="jsn-Zed-210248774077-23727093-0"}' command is executed.
+23:36:39 INFO  : Device configured successfully with "C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vitis/test_relu/_ide/bitstream/relu_bd_wrapper.bit"
+23:36:39 INFO  : Context for 'APU' is selected.
+23:36:39 INFO  : Hardware design and registers information is loaded from 'C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vitis/zed_hw/export/zed_hw/hw/relu_bd_wrapper.xsa'.
+23:36:39 INFO  : 'configparams force-mem-access 1' command is executed.
+23:36:39 INFO  : Context for 'APU' is selected.
+23:36:39 INFO  : Sourcing of 'C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vitis/test_relu/_ide/psinit/ps7_init.tcl' is done.
+23:36:39 INFO  : 'ps7_init' command is executed.
+23:36:39 INFO  : 'ps7_post_config' command is executed.
+23:36:39 INFO  : 'configparams force-mem-access 0' command is executed.
+23:36:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248774077" && level==0 && jtag_device_ctx=="jsn-Zed-210248774077-23727093-0"}
+fpga -file C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vitis/test_relu/_ide/bitstream/relu_bd_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vitis/zed_hw/export/zed_hw/hw/relu_bd_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vitis/test_relu/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:36:39 INFO  : Launch script is exported to file 'C:\Users\dianhsu\Desktop\Using_IP_with_Zynq\mylab\relu_vitis\test_relu_system\_ide\scripts\debugger_test_relu-default.tcl'
+23:36:53 INFO  : Disconnected from the channel tcfchan#3.
+23:37:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:37:00 INFO  : Jtag cable 'Digilent Zed 210248774077' is selected.
+23:37:00 INFO  : 'jtag frequency' command is executed.
+23:37:00 INFO  : Context for 'APU' is selected.
+23:37:00 INFO  : System reset is completed.
+23:37:03 INFO  : 'after 3000' command is executed.
+23:37:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248774077" && level==0 && jtag_device_ctx=="jsn-Zed-210248774077-23727093-0"}' command is executed.
+23:37:06 INFO  : Device configured successfully with "C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vitis/test_relu/_ide/bitstream/relu_bd_wrapper.bit"
+23:37:06 INFO  : Context for 'APU' is selected.
+23:37:06 INFO  : Hardware design and registers information is loaded from 'C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vitis/zed_hw/export/zed_hw/hw/relu_bd_wrapper.xsa'.
+23:37:06 INFO  : 'configparams force-mem-access 1' command is executed.
+23:37:06 INFO  : Context for 'APU' is selected.
+23:37:06 INFO  : Sourcing of 'C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vitis/test_relu/_ide/psinit/ps7_init.tcl' is done.
+23:37:06 INFO  : 'ps7_init' command is executed.
+23:37:06 INFO  : 'ps7_post_config' command is executed.
+23:37:06 INFO  : 'configparams force-mem-access 0' command is executed.
+23:37:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248774077" && level==0 && jtag_device_ctx=="jsn-Zed-210248774077-23727093-0"}
+fpga -file C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vitis/test_relu/_ide/bitstream/relu_bd_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vitis/zed_hw/export/zed_hw/hw/relu_bd_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vitis/test_relu/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:37:06 INFO  : Launch script is exported to file 'C:\Users\dianhsu\Desktop\Using_IP_with_Zynq\mylab\relu_vitis\test_relu_system\_ide\scripts\debugger_test_relu-default.tcl'
+23:37:26 INFO  : Checking for BSP changes to sync application flags for project 'test_relu'...
+23:38:02 INFO  : Result from executing command 'getProjects': zed_hw
+23:38:02 INFO  : Result from executing command 'getPlatforms': zed_hw|C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vitis/zed_hw/export/zed_hw/zed_hw.xpfm
+23:38:02 INFO  : Checking for BSP changes to sync application flags for project 'test_relu'...
+23:38:20 INFO  : Disconnected from the channel tcfchan#4.
+23:38:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:38:21 INFO  : Jtag cable 'Digilent Zed 210248774077' is selected.
+23:38:21 INFO  : 'jtag frequency' command is executed.
+23:38:21 INFO  : Context for 'APU' is selected.
+23:38:21 INFO  : System reset is completed.
+23:38:24 INFO  : 'after 3000' command is executed.
+23:38:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248774077" && level==0 && jtag_device_ctx=="jsn-Zed-210248774077-23727093-0"}' command is executed.
+23:38:27 INFO  : Device configured successfully with "C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vitis/test_relu/_ide/bitstream/relu_bd_wrapper.bit"
+23:38:27 INFO  : Context for 'APU' is selected.
+23:38:27 INFO  : Hardware design and registers information is loaded from 'C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vitis/zed_hw/export/zed_hw/hw/relu_bd_wrapper.xsa'.
+23:38:27 INFO  : 'configparams force-mem-access 1' command is executed.
+23:38:27 INFO  : Context for 'APU' is selected.
+23:38:27 INFO  : Sourcing of 'C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vitis/test_relu/_ide/psinit/ps7_init.tcl' is done.
+23:38:27 INFO  : 'ps7_init' command is executed.
+23:38:27 INFO  : 'ps7_post_config' command is executed.
+23:38:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:38:27 INFO  : The application 'C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vitis/test_relu/Debug/test_relu.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:38:27 INFO  : 'configparams force-mem-access 0' command is executed.
+23:38:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248774077" && level==0 && jtag_device_ctx=="jsn-Zed-210248774077-23727093-0"}
+fpga -file C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vitis/test_relu/_ide/bitstream/relu_bd_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vitis/zed_hw/export/zed_hw/hw/relu_bd_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vitis/test_relu/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vitis/test_relu/Debug/test_relu.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:38:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:38:27 INFO  : 'con' command is executed.
+23:38:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:38:27 INFO  : Launch script is exported to file 'C:\Users\dianhsu\Desktop\Using_IP_with_Zynq\mylab\relu_vitis\test_relu_system\_ide\scripts\debugger_test_relu-default.tcl'
+23:43:13 INFO  : Checking for BSP changes to sync application flags for project 'test_relu'...
+23:44:27 INFO  : Checking for BSP changes to sync application flags for project 'test_relu'...
+23:44:51 INFO  : Checking for BSP changes to sync application flags for project 'test_relu'...
+23:45:17 INFO  : Checking for BSP changes to sync application flags for project 'test_relu'...
+00:06:10 INFO  : Disconnected from the channel tcfchan#9.
