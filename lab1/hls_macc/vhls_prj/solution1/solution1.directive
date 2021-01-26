@@ -5,6 +5,11 @@
                 <option name="name" value="hls_macc"/>
             </pragma>
         </directive>
+        <directive functionName="hls_macc" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="hls_macc"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

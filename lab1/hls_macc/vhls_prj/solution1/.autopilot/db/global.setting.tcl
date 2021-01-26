@@ -42,15 +42,15 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xc7z020:-clg484:-1
-set SourceFiles {sc {} c {../../hls_macc.h ../../hls_macc.c}}
-set SourceFlags {sc {} c {{ } {} { } {}}}
+set SourceFiles {sc {} c ../../hls_macc.c}
+set SourceFlags {sc {} c {{}}}
 set DirectiveFile C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/lab1/hls_macc/vhls_prj/solution1/solution1.directive
-set TBFiles {verilog ../../hls_macc_test.c bc ../../hls_macc_test.c sc ../../hls_macc_test.c vhdl ../../hls_macc_test.c c {} cas ../../hls_macc_test.c}
+set TBFiles {verilog ../../hls_macc_test.c bc ../../hls_macc_test.c vhdl ../../hls_macc_test.c sc ../../hls_macc_test.c cas ../../hls_macc_test.c c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
-set TBTops {verilog {} bc {} sc {} vhdl {} c {} cas {}}
-set TBInstNames {verilog {} bc {} sc {} vhdl {} c {} cas {}}
+set TBTops {verilog {} bc {} vhdl {} sc {} cas {} c {}}
+set TBInstNames {verilog {} bc {} vhdl {} sc {} cas {} c {}}
 set XDCFiles {}
 set ExtraGlobalOptions {"area_timing" 1 "clock_gate" 1 "impl_flow" map "power_gate" 0}
 set TBTVFileNotFound {}

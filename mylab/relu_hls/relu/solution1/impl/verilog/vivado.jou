@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Jan 26 14:09:19 2021
+# Process ID: 13036
+# Current directory: C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_hls/relu/solution1/impl/verilog
+# Command line: vivado.exe -notrace -mode batch -source run_vivado.tcl
+# Log file: C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_hls/relu/solution1/impl/verilog/vivado.log
+# Journal file: C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_hls/relu/solution1/impl/verilog\vivado.jou
+#-----------------------------------------------------------
+source run_vivado.tcl -notrace

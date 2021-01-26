@@ -8,11 +8,10 @@ using namespace std;
 #define CNT 10
 
 int main() {
-	data_t din[CNT];
-	data_t dout[CNT];
-	for(int i = 0; i < CNT; ++i){
-		din[i] = (i - CNT/2) * 1.3;
+	data_t din[3][128][128];
+	for(int i = 0; i < 3 * 128 * 128; ++i){
+		din[i/128/128][i/128%128][i%128] = (i - CNT/2) * 1.3;
 	}
-	relu_top(din, dout, CNT);
+	relu_top(din);
 	return 0;
 }

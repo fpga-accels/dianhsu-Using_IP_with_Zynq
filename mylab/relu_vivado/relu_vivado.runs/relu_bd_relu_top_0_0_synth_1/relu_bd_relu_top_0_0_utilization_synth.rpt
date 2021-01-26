@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Mon Jan 18 23:23:59 2021
+| Date         : Tue Jan 26 14:25:26 2021
 | Host         : Windows10-508 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file relu_bd_relu_top_0_0_utilization_synth.rpt -pb relu_bd_relu_top_0_0_utilization_synth.pb
 | Design       : relu_bd_relu_top_0_0
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 1031 |     0 |     53200 |  1.94 |
-|   LUT as Logic             |  961 |     0 |     53200 |  1.81 |
-|   LUT as Memory            |   70 |     0 |     17400 |  0.40 |
+| Slice LUTs*                | 1063 |     0 |     53200 |  2.00 |
+|   LUT as Logic             |  931 |     0 |     53200 |  1.75 |
+|   LUT as Memory            |  132 |     0 |     17400 |  0.76 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
-|     LUT as Shift Register  |   70 |     0 |           |       |
-| Slice Registers            | 1823 |     0 |    106400 |  1.71 |
-|   Register as Flip Flop    | 1823 |     0 |    106400 |  1.71 |
+|     LUT as Shift Register  |  132 |     0 |           |       |
+| Slice Registers            | 2024 |     0 |    106400 |  1.90 |
+|   Register as Flip Flop    | 2024 |     0 |    106400 |  1.90 |
 |   Register as Latch        |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                   |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                   |    0 |     0 |     13300 |  0.00 |
@@ -59,7 +59,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 4     |          Yes |         Set |            - |
-| 1819  |          Yes |       Reset |            - |
+| 2020  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -69,10 +69,10 @@ Table of Contents
 +-------------------+------+-------+-----------+-------+
 |     Site Type     | Used | Fixed | Available | Util% |
 +-------------------+------+-------+-----------+-------+
-| Block RAM Tile    |    2 |     0 |       140 |  1.43 |
-|   RAMB36/FIFO*    |    2 |     0 |       140 |  1.43 |
-|     RAMB36E1 only |    2 |       |           |       |
-|   RAMB18          |    0 |     0 |       280 |  0.00 |
+| Block RAM Tile    |    1 |     0 |       140 |  0.71 |
+|   RAMB36/FIFO*    |    0 |     0 |       140 |  0.00 |
+|   RAMB18          |    2 |     0 |       280 |  0.71 |
+|     RAMB18E1 only |    2 |       |           |       |
 +-------------------+------+-------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
 
@@ -149,17 +149,17 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 1819 |        Flop & Latch |
-| LUT3     |  370 |                 LUT |
-| LUT2     |  275 |                 LUT |
-| LUT6     |  265 |                 LUT |
-| LUT4     |  207 |                 LUT |
-| CARRY4   |  132 |          CarryLogic |
-| LUT1     |   78 |                 LUT |
-| SRL16E   |   70 |  Distributed Memory |
-| LUT5     |   65 |                 LUT |
+| FDRE     | 2020 |        Flop & Latch |
+| LUT3     |  518 |                 LUT |
+| LUT4     |  265 |                 LUT |
+| LUT2     |  201 |                 LUT |
+| LUT6     |  174 |                 LUT |
+| CARRY4   |  156 |          CarryLogic |
+| SRL16E   |  132 |  Distributed Memory |
+| LUT5     |   85 |                 LUT |
+| LUT1     |   19 |                 LUT |
 | FDSE     |    4 |        Flop & Latch |
-| RAMB36E1 |    2 |        Block Memory |
+| RAMB18E1 |    2 |        Block Memory |
 +----------+------+---------------------+
 
 

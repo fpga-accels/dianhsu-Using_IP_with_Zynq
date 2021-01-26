@@ -1,0 +1,105 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "relu_top",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "relu_top"
+              }]
+          }
+        },
+        {
+          "functionName": "relu_top",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "m_axi",
+                "value": ""
+              },
+              {
+                "name": "port",
+                "value": "din"
+              },
+              {
+                "name": "offset",
+                "value": "slave"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "relu_top",
+          "label": "relu_top_label0",
+          "functionLabel": "",
+          "pragma": {
+            "name": "PIPELINE",
+            "option": [{
+                "name": "off",
+                "value": ""
+              }]
+          }
+        },
+        {
+          "functionName": "relu_top",
+          "label": "relu_top_label1",
+          "functionLabel": "",
+          "pragma": {
+            "name": "PIPELINE",
+            "option": [{
+                "name": "off",
+                "value": ""
+              }]
+          }
+        },
+        {
+          "functionName": "relu_top",
+          "label": "relu_top_label2",
+          "functionLabel": "",
+          "pragma": {
+            "name": "PIPELINE",
+            "option": [{
+                "name": "off",
+                "value": ""
+              }]
+          }
+        },
+        {
+          "functionName": "relu_top",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": ""
+              },
+              {
+                "name": "port",
+                "value": "return"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "relu_top",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "relu_top"
+              }]
+          }
+        }
+      ]
+    }]}

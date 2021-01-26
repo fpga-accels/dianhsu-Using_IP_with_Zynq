@@ -16,19 +16,6 @@
 -makelib xcelium_lib/xpm \
   "C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
--makelib xcelium_lib/axi_infrastructure_v1_1_0 \
-  "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
--endlib
--makelib xcelium_lib/axi_vip_v1_1_8 -sv \
-  "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/94c3/hdl/axi_vip_v1_1_vl_rfs.sv" \
--endlib
--makelib xcelium_lib/processing_system7_vip_v1_0_10 -sv \
-  "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/34f8/hdl/processing_system7_vip_v1_0_vl_rfs.sv" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/relu_bd/ip/relu_bd_processing_system7_0_2/sim/relu_bd_processing_system7_0_2.v" \
-  "../../../bd/relu_bd/sim/relu_bd.v" \
--endlib
 -makelib xcelium_lib/xbip_utils_v3_0_10 \
   "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/d117/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
 -endlib
@@ -60,19 +47,27 @@
   "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/b0c0/hdl/floating_point_v7_1_rfs.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/e385/hdl/verilog/relu_top_control_s_axi.v" \
-  "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/e385/hdl/verilog/relu_top_dcmp_64ns_64ns_1_2_no_dsp_1.v" \
-  "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/e385/hdl/verilog/relu_top_din_m_axi.v" \
-  "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/e385/hdl/verilog/relu_top_dout_m_axi.v" \
-  "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/e385/hdl/verilog/relu_top.v" \
-  "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/e385/hdl/ip/relu_top_ap_dcmp_0_no_dsp_64.v" \
+  "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/f2ad/hdl/verilog/relu_top_control_s_axi.v" \
+  "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/f2ad/hdl/verilog/relu_top_fcmp_32ns_32ns_1_2_no_dsp_1.v" \
+  "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/f2ad/hdl/verilog/relu_top_gmem_m_axi.v" \
+  "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/f2ad/hdl/verilog/relu_top.v" \
+  "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/f2ad/hdl/ip/relu_top_ap_fcmp_0_no_dsp_32.v" \
   "../../../bd/relu_bd/ip/relu_bd_relu_top_0_0/sim/relu_bd_relu_top_0_0.v" \
+-endlib
+-makelib xcelium_lib/axi_infrastructure_v1_1_0 \
+  "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/axi_vip_v1_1_8 -sv \
+  "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/94c3/hdl/axi_vip_v1_1_vl_rfs.sv" \
+-endlib
+-makelib xcelium_lib/processing_system7_vip_v1_0_10 -sv \
+  "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/34f8/hdl/processing_system7_vip_v1_0_vl_rfs.sv" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/relu_bd/ip/relu_bd_processing_system7_0_0/sim/relu_bd_processing_system7_0_0.v" \
 -endlib
 -makelib xcelium_lib/generic_baseblocks_v2_1_0 \
   "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
--endlib
--makelib xcelium_lib/axi_register_slice_v2_1_22 \
-  "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v" \
 -endlib
 -makelib xcelium_lib/fifo_generator_v13_2_5 \
   "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/276e/simulation/fifo_generator_vlog_beh.v" \
@@ -86,11 +81,14 @@
 -makelib xcelium_lib/axi_data_fifo_v2_1_21 \
   "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/54c0/hdl/axi_data_fifo_v2_1_vl_rfs.v" \
 -endlib
--makelib xcelium_lib/axi_crossbar_v2_1_23 \
-  "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/bc0a/hdl/axi_crossbar_v2_1_vl_rfs.v" \
+-makelib xcelium_lib/axi_register_slice_v2_1_22 \
+  "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/axi_protocol_converter_v2_1_22 \
+  "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/5cee/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/relu_bd/ip/relu_bd_xbar_0/sim/relu_bd_xbar_0.v" \
+  "../../../bd/relu_bd/ip/relu_bd_auto_pc_0/sim/relu_bd_auto_pc_0.v" \
 -endlib
 -makelib xcelium_lib/lib_cdc_v1_0_2 \
   "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
@@ -101,18 +99,9 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/relu_bd/ip/relu_bd_rst_ps7_0_100M_0/sim/relu_bd_rst_ps7_0_100M_0.vhd" \
 -endlib
--makelib xcelium_lib/xlconstant_v1_1_7 \
-  "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v" \
--endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/relu_bd/ip/relu_bd_xlconstant_0_0/sim/relu_bd_xlconstant_0_0.v" \
--endlib
--makelib xcelium_lib/axi_protocol_converter_v2_1_22 \
-  "../../../../relu_vivado.gen/sources_1/bd/relu_bd/ipshared/5cee/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/relu_bd/ip/relu_bd_auto_pc_0/sim/relu_bd_auto_pc_0.v" \
   "../../../bd/relu_bd/ip/relu_bd_auto_pc_1/sim/relu_bd_auto_pc_1.v" \
+  "../../../bd/relu_bd/sim/relu_bd.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v

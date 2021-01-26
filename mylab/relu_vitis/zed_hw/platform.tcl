@@ -18,7 +18,5 @@ platform active {zed_hw}
 platform generate
 platform clean
 platform generate
-domain active {zynq_fsbl}
-bsp reload
-domain active {standalone_domain}
-bsp reload
+platform clean
+platform generate

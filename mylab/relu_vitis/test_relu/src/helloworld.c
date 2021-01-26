@@ -49,33 +49,85 @@
 #include <stdlib.h>
 #include "platform.h"
 #include "xil_printf.h"
+#include "XRelu_top.h"
 #include "xparameters.h"
 #include "xscugic.h"
-#include "XRelu_top.h"
 
 XRelu_top ReluTop;
+//Interrupt Controller Instance
 XScuGic ScuGic;
-
+// Global variable definitions - used by ISR
 volatile static int RunReluTop = 0;
 volatile static int ResultAvailReluTop = 0;
 
 int setup_interrupt();
 int relu_top_init(XRelu_top *relu_topPtr);
 void relu_top_start(void *InstancePtr);
-// The ISR prototype
 void relu_top_isr(void *InstancePtr);
-
+float data[3][128][128];
 int main() {
 	init_platform();
 
-	print("Hello World\n\r");
-	print("Successfully ran Hello World application");
+	print("Test Relu\n\r");
+
+	print("Init data\n\r");
+
+	for (int i = 0; i < 3; ++i) {
+		for (int j = 0; j < 128; ++j) {
+			for (int k = 0; k < 128; ++k) {
+				data[i][j][k] = (i + j + k) % 2 == 0 ? -1.1 : 1.1;
+			}
+		}
+	}
+
+	int status = relu_top_init(&ReluTop);
+
+	if (status != XST_SUCCESS) {
+		print("HLS peripheral setup failed\n\r");
+		exit(-1);
+	}
+	//Setup the interrupt
+	status = setup_interrupt();
+
+	if (status != XST_SUCCESS) {
+		print("Interrupt setup failed\n\r");
+		exit(-1);
+	}
+	u64 ptr = (u64)data;
+	printf("%d %lld\n\r", data, ptr);
+	XRelu_top_Set_din(&ReluTop, ptr);
+
+	if (XRelu_top_IsReady(&ReluTop))
+		print("HLS peripheral is ready.  Starting...\n\r");
+	else {
+		print("!!! HLS peripheral is not ready! Exiting...\n\r");
+		exit(-1);
+	}
+
+	relu_top_start(&ReluTop);
+	while (!ResultAvailReluTop); // spin
+	print("Interrupt received from HLS HW.\n\r");
+
+	int low = 0, equal = 0, high = 0;
+	for (int i = 0; i < 3; ++i) {
+		for (int j = 0; j < 128; ++j) {
+			for (int k = 0; k < 128; ++k) {
+				if (data[i][j][k] > 0) {
+					high++;
+				} else if (data[i][j][k] < 0) {
+					low++;
+				} else {
+					equal++;
+				}
+			}
+		}
+	}
+	printf("low: %d, equal: %d, high: %d\n\r", low, equal, high);
 	cleanup_platform();
 	return 0;
 }
 
 int setup_interrupt() {
-	//This functions sets up the interrupt on the ARM
 	int result;
 	XScuGic_Config *pCfg = XScuGic_LookupConfig(XPAR_SCUGIC_SINGLE_DEVICE_ID);
 	if (pCfg == NULL) {
@@ -111,21 +163,21 @@ int setup_interrupt() {
 	XScuGic_Enable(&ScuGic, XPAR_FABRIC_RELU_TOP_0_INTERRUPT_INTR);
 	return XST_SUCCESS;
 }
-int relu_top_init(XRelu_top *relu_topPtr){
+int relu_top_init(XRelu_top *relu_topPtr) {
 	XRelu_top_Config *cfgPtr;
-	   int status;
+	int status;
 
-	   cfgPtr = XRelu_top_LookupConfig(XPAR_XRELU_TOP_0_DEVICE_ID);
-	   if (!cfgPtr) {
-	      print("ERROR: Lookup of acclerator configuration failed.\n\r");
-	      return XST_FAILURE;
-	   }
-	   status = XRelu_top_CfgInitialize(relu_topPtr, cfgPtr);
-	   if (status != XST_SUCCESS) {
-	      print("ERROR: Could not initialize accelerator.\n\r");
-	      return XST_FAILURE;
-	   }
-	   return status;
+	cfgPtr = XRelu_top_LookupConfig(XPAR_XRELU_TOP_0_DEVICE_ID);
+	if (!cfgPtr) {
+		print("ERROR: Lookup of acclerator configuration failed.\n\r");
+		return XST_FAILURE;
+	}
+	status = XRelu_top_CfgInitialize(relu_topPtr, cfgPtr);
+	if (status != XST_SUCCESS) {
+		print("ERROR: Could not initialize accelerator.\n\r");
+		return XST_FAILURE;
+	}
+	return status;
 }
 void relu_top_start(void *InstancePtr) {
 	XRelu_top *pAccelerator = (XRelu_top *) InstancePtr;
@@ -133,7 +185,6 @@ void relu_top_start(void *InstancePtr) {
 	XRelu_top_InterruptGlobalEnable(pAccelerator);
 	XRelu_top_Start(pAccelerator);
 }
-// The ISR prototype
 void relu_top_isr(void *InstancePtr) {
 	XRelu_top *pAccelerator = (XRelu_top *) InstancePtr;
 
@@ -144,10 +195,11 @@ void relu_top_isr(void *InstancePtr) {
 
 	// clear the local interrupt
 	XRelu_top_InterruptClear(pAccelerator, 1);
-
+	print("Get Interrupt from HLS\n\r");
 	ResultAvailReluTop = 1;
 	// restart the core if it should run again
 	if (RunReluTop) {
 		relu_top_start(pAccelerator);
 	}
 }
+

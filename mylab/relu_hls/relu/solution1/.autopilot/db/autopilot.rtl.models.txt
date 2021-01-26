@@ -1,0 +1,4 @@
+relu_top_fcmp_32ns_32ns_1_2_no_dsp_1
+relu_top_control_s_axi
+relu_top_gmem_m_axi
+relu_top

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1610959325507">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1611051253001">
   <ports id="1" name="a" type="PortType" originalName="a" coreId="1" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="b" type="PortType" originalName="b" coreId="1" bitwidth="32">
+  <ports id="2" name="b" type="PortType" originalName="b" coreId="1029993587" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="accum" type="PortType" originalName="accum" coreId="727648984" bitwidth="32" direction="DirOut">
+  <ports id="3" name="accum" type="PortType" originalName="accum" coreId="849277344" bitwidth="32" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="4" name="accum_clr" type="PortType" originalName="accum_clr" coreId="4294967292" bitwidth="1">
+  <ports id="4" name="accum_clr" type="PortType" originalName="accum_clr" coreId="0" bitwidth="1">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <edges id="33" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.0"/>
@@ -43,7 +43,7 @@
       <dataInputObjs>a</dataInputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="acc_reg_load" lineNumber="14" fileName="hls_macc.c" fileDirectory=".." coreId="4294967295" contextFuncName="hls_macc" bitwidth="32" opcode="load" nodeLabel="8.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="acc_reg_load" lineNumber="14" fileName="hls_macc.c" fileDirectory=".." coreId="0" contextFuncName="hls_macc" bitwidth="32" opcode="load" nodeLabel="8.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hls_macc.c" linenumber="14" fileDirectory="C:\Users\dianhsu\Desktop\Using_IP_with_Zynq\lab1\hls_macc" functionName="hls_macc"/>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
@@ -54,7 +54,7 @@
       <dataOutputObjs>add</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="mul_ln14" lineNumber="14" fileName="hls_macc.c" fileDirectory=".." rtlName="mul_32s_32s_32_7_1_U1" opType="mul" coreId="4294967295" contextFuncName="hls_macc" bitwidth="32" opcode="mul" nodeLabel="1.0" nodeLatency="6" m_display="0" m_delay="2.11" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="mul_ln14" lineNumber="14" fileName="hls_macc.c" fileDirectory=".." rtlName="mul_32s_32s_32_7_1_U1" opType="mul" coreId="0" contextFuncName="hls_macc" bitwidth="32" opcode="mul" nodeLabel="1.0" nodeLatency="6" m_display="0" m_delay="2.11" m_topoIndex="4" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hls_macc.c" linenumber="14" fileDirectory="C:\Users\dianhsu\Desktop\Using_IP_with_Zynq\lab1\hls_macc" functionName="hls_macc"/>
       <dataInputObjs>read</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
@@ -72,11 +72,11 @@
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>accum</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="acc_reg_write_ln13" lineNumber="13" fileName="hls_macc.c" fileDirectory=".." coreId="0" contextFuncName="hls_macc" opcode="store" nodeLabel="8.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="acc_reg_write_ln13" lineNumber="13" fileName="hls_macc.c" fileDirectory=".." coreId="4294967295" contextFuncName="hls_macc" opcode="store" nodeLabel="8.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hls_macc.c" linenumber="13" fileDirectory="C:\Users\dianhsu\Desktop\Using_IP_with_Zynq\lab1\hls_macc" functionName="hls_macc"/>
       <dataInputObjs>add</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="_ln16" lineNumber="16" fileName="hls_macc.c" fileDirectory=".." coreId="0" contextFuncName="hls_macc" opcode="ret" nodeLabel="9.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="_ln16" lineNumber="16" fileName="hls_macc.c" fileDirectory=".." coreId="50" contextFuncName="hls_macc" opcode="ret" nodeLabel="9.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="hls_macc.c" linenumber="16" fileDirectory="C:\Users\dianhsu\Desktop\Using_IP_with_Zynq\lab1\hls_macc" functionName="hls_macc"/>
     </node_objs>
     <fileValidLineNumbers fileName="hls_macc.c">

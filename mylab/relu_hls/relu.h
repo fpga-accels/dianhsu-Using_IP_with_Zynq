@@ -1,10 +1,9 @@
 #ifndef _RELU_H_
 #define _RELU_H_
 
-#include <hls_stream.h>
 
-typedef double data_t;
+typedef float data_t;
 
-void relu_top(data_t *din, data_t *dout, int cnt);
+void relu_top(data_t din[3][3][3]);
 
 #endif //_RELU_H_

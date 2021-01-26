@@ -1,6 +1,7 @@
 {"sourceFile": [{
       "name": "",
-      "directive": [{
+      "directive": [
+        {
           "functionName": "hls_macc",
           "label": "",
           "functionLabel": "",
@@ -11,5 +12,18 @@
                 "value": "hls_macc"
               }]
           }
-        }]
+        },
+        {
+          "functionName": "hls_macc",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "hls_macc"
+              }]
+          }
+        }
+      ]
     }]}

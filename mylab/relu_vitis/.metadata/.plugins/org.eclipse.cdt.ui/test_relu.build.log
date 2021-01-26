@@ -1,40 +1,10 @@
-23:45:17 **** Incremental Build of configuration Debug for project test_relu ****
+15:18:03 **** Incremental Build of configuration Debug for project test_relu ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/helloworld.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vitis/zed_hw/export/zed_hw/sw/zed_hw/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'setup_interrupt':
-../src/helloworld.c:105:36: error: 'XPAR_FABRIC_RELU_TOP_0_INTERRUPT_INTR' undeclared (first use in this function)
-  105 |  result = XScuGic_Connect(&ScuGic, XPAR_FABRIC_RELU_TOP_0_INTERRUPT_INTR,
-      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/helloworld.c:105:36: note: each undeclared identifier is reported only once for each function it appears in
-../src/helloworld.c: In function 'relu_top_start':
-../src/helloworld.c:132:2: warning: implicit declaration of function 'XRelu_top_InterruptEnable' [-Wimplicit-function-declaration]
-  132 |  XRelu_top_InterruptEnable(pAccelerator, 1);
-      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
-../src/helloworld.c:133:2: warning: implicit declaration of function 'XRelu_top_InterruptGlobalEnable' [-Wimplicit-function-declaration]
-  133 |  XRelu_top_InterruptGlobalEnable(pAccelerator);
-      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/helloworld.c:134:2: warning: implicit declaration of function 'XRelu_top_Start'; did you mean 'relu_top_start'? [-Wimplicit-function-declaration]
-  134 |  XRelu_top_Start(pAccelerator);
-      |  ^~~~~~~~~~~~~~~
-      |  relu_top_start
-../src/helloworld.c: In function 'relu_top_isr':
-../src/helloworld.c:141:2: warning: implicit declaration of function 'XRelu_top_InterruptGlobalDisable' [-Wimplicit-function-declaration]
-  141 |  XRelu_top_InterruptGlobalDisable(pAccelerator);
-      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/helloworld.c:143:2: warning: implicit declaration of function 'XRelu_top_InterruptDisable' [-Wimplicit-function-declaration]
-  143 |  XRelu_top_InterruptDisable(pAccelerator, 0xffffffff);
-      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/helloworld.c:146:2: warning: implicit declaration of function 'XRelu_top_InterruptClear' [-Wimplicit-function-declaration]
-  146 |  XRelu_top_InterruptClear(pAccelerator, 1);
-      |  ^~~~~~~~~~~~~~~~~~~~~~~~
-make[1]: *** [src/subdir.mk:26: src/helloworld.o] Error 1
-make: *** [makefile:34: all] Error 2
+make[1]: Nothing to be done for 'main-build'.
 
-23:45:17 Build Finished (took 279ms)
+15:18:03 Build Finished (took 224ms)
 

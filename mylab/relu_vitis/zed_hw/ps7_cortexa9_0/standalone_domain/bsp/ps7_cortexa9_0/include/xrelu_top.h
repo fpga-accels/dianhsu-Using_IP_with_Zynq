@@ -80,9 +80,23 @@ int XRelu_top_Initialize(XRelu_top *InstancePtr, const char* InstanceName);
 int XRelu_top_Release(XRelu_top *InstancePtr);
 #endif
 
+void XRelu_top_Start(XRelu_top *InstancePtr);
+u32 XRelu_top_IsDone(XRelu_top *InstancePtr);
+u32 XRelu_top_IsIdle(XRelu_top *InstancePtr);
+u32 XRelu_top_IsReady(XRelu_top *InstancePtr);
+void XRelu_top_EnableAutoRestart(XRelu_top *InstancePtr);
+void XRelu_top_DisableAutoRestart(XRelu_top *InstancePtr);
 
-void XRelu_top_Set_cnt(XRelu_top *InstancePtr, u32 Data);
-u32 XRelu_top_Get_cnt(XRelu_top *InstancePtr);
+void XRelu_top_Set_din(XRelu_top *InstancePtr, u64 Data);
+u64 XRelu_top_Get_din(XRelu_top *InstancePtr);
+
+void XRelu_top_InterruptGlobalEnable(XRelu_top *InstancePtr);
+void XRelu_top_InterruptGlobalDisable(XRelu_top *InstancePtr);
+void XRelu_top_InterruptEnable(XRelu_top *InstancePtr, u32 Mask);
+void XRelu_top_InterruptDisable(XRelu_top *InstancePtr, u32 Mask);
+void XRelu_top_InterruptClear(XRelu_top *InstancePtr, u32 Mask);
+u32 XRelu_top_InterruptGetEnabled(XRelu_top *InstancePtr);
+u32 XRelu_top_InterruptGetStatus(XRelu_top *InstancePtr);
 
 #ifdef __cplusplus
 }
