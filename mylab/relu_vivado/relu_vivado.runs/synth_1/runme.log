@@ -22,20 +22,20 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 20420
+INFO: [Synth 8-7075] Helper process launched with PID 20600
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1191.809 ; gain = 65.145
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1189.816 ; gain = 63.594
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'relu_bd_wrapper' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/hdl/relu_bd_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'relu_bd_wrapper' [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/hdl/relu_bd_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'relu_bd' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/synth/relu_bd.v:13]
 INFO: [Synth 8-6157] synthesizing module 'relu_bd_axi_mem_intercon_0' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/synth/relu_bd.v:512]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1QG1Z0J' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/synth/relu_bd.v:1187]
-INFO: [Synth 8-6157] synthesizing module 'relu_bd_auto_pc_0' [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/synth_1/.Xil/Vivado-13316-Windows10-508/realtime/relu_bd_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'relu_bd_auto_pc_0' (1#1) [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/synth_1/.Xil/Vivado-13316-Windows10-508/realtime/relu_bd_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'relu_bd_auto_pc_0' [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/synth_1/.Xil/Vivado-20168-Windows10-508/realtime/relu_bd_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'relu_bd_auto_pc_0' (1#1) [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/synth_1/.Xil/Vivado-20168-Windows10-508/realtime/relu_bd_auto_pc_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1QG1Z0J' (2#1) [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/synth/relu_bd.v:1187]
 INFO: [Synth 8-6155] done synthesizing module 'relu_bd_axi_mem_intercon_0' (3#1) [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/synth/relu_bd.v:512]
-INFO: [Synth 8-6157] synthesizing module 'relu_bd_processing_system7_0_0' [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/synth_1/.Xil/Vivado-13316-Windows10-508/realtime/relu_bd_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'relu_bd_processing_system7_0_0' (4#1) [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/synth_1/.Xil/Vivado-13316-Windows10-508/realtime/relu_bd_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'relu_bd_processing_system7_0_0' [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/synth_1/.Xil/Vivado-20168-Windows10-508/realtime/relu_bd_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'relu_bd_processing_system7_0_0' (4#1) [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/synth_1/.Xil/Vivado-20168-Windows10-508/realtime/relu_bd_processing_system7_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'relu_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/synth/relu_bd.v:281]
 WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'relu_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/synth/relu_bd.v:281]
 WARNING: [Synth 8-7071] port 'S_AXI_HP0_BID' of module 'relu_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/synth/relu_bd.v:281]
@@ -47,43 +47,41 @@ WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'relu_bd_processing_s
 WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'relu_bd_processing_system7_0_0' has 111 connections declared, but only 103 given [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/synth/relu_bd.v:281]
 INFO: [Synth 8-6157] synthesizing module 'relu_bd_ps7_0_axi_periph_0' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/synth/relu_bd.v:882]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1U4WDHD' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/synth/relu_bd.v:1547]
-INFO: [Synth 8-6157] synthesizing module 'relu_bd_auto_pc_1' [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/synth_1/.Xil/Vivado-13316-Windows10-508/realtime/relu_bd_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'relu_bd_auto_pc_1' (5#1) [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/synth_1/.Xil/Vivado-13316-Windows10-508/realtime/relu_bd_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'relu_bd_auto_pc_1' [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/synth_1/.Xil/Vivado-20168-Windows10-508/realtime/relu_bd_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'relu_bd_auto_pc_1' (5#1) [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/synth_1/.Xil/Vivado-20168-Windows10-508/realtime/relu_bd_auto_pc_1_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'relu_bd_auto_pc_1' is unconnected for instance 'auto_pc' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/synth/relu_bd.v:1782]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'relu_bd_auto_pc_1' is unconnected for instance 'auto_pc' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/synth/relu_bd.v:1782]
 WARNING: [Synth 8-7023] instance 'auto_pc' of module 'relu_bd_auto_pc_1' has 59 connections declared, but only 57 given [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/synth/relu_bd.v:1782]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1U4WDHD' (6#1) [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/synth/relu_bd.v:1547]
 INFO: [Synth 8-6155] done synthesizing module 'relu_bd_ps7_0_axi_periph_0' (7#1) [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/synth/relu_bd.v:882]
-INFO: [Synth 8-6157] synthesizing module 'relu_bd_relu_top_0_0' [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/synth_1/.Xil/Vivado-13316-Windows10-508/realtime/relu_bd_relu_top_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'relu_bd_relu_top_0_0' (8#1) [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/synth_1/.Xil/Vivado-13316-Windows10-508/realtime/relu_bd_relu_top_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'relu_bd_rst_ps7_0_100M_0' [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/synth_1/.Xil/Vivado-13316-Windows10-508/realtime/relu_bd_rst_ps7_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'relu_bd_rst_ps7_0_100M_0' (9#1) [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/synth_1/.Xil/Vivado-13316-Windows10-508/realtime/relu_bd_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'relu_bd_relu_top_0_1' [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/synth_1/.Xil/Vivado-20168-Windows10-508/realtime/relu_bd_relu_top_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'relu_bd_relu_top_0_1' (8#1) [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/synth_1/.Xil/Vivado-20168-Windows10-508/realtime/relu_bd_relu_top_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'relu_bd_rst_ps7_0_100M_0' [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/synth_1/.Xil/Vivado-20168-Windows10-508/realtime/relu_bd_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'relu_bd_rst_ps7_0_100M_0' (9#1) [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/synth_1/.Xil/Vivado-20168-Windows10-508/realtime/relu_bd_rst_ps7_0_100M_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'relu_bd_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/synth/relu_bd.v:503]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'relu_bd_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/synth/relu_bd.v:503]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'relu_bd_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/synth/relu_bd.v:503]
 WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'relu_bd_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/synth/relu_bd.v:503]
 WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'relu_bd_rst_ps7_0_100M_0' has 10 connections declared, but only 6 given [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/synth/relu_bd.v:503]
 INFO: [Synth 8-6155] done synthesizing module 'relu_bd' (10#1) [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/synth/relu_bd.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'relu_bd_wrapper' (11#1) [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/hdl/relu_bd_wrapper.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'relu_bd_wrapper' (11#1) [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/hdl/relu_bd_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1249.449 ; gain = 122.785
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1247.418 ; gain = 121.195
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1249.449 ; gain = 122.785
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1263.738 ; gain = 137.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1249.449 ; gain = 122.785
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1263.738 ; gain = 137.516
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1249.449 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1263.738 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/ip/relu_bd_relu_top_0_0/relu_bd_relu_top_0_0/relu_bd_relu_top_0_0_in_context.xdc] for cell 'relu_bd_i/relu_top_0'
-Finished Parsing XDC File [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/ip/relu_bd_relu_top_0_0/relu_bd_relu_top_0_0/relu_bd_relu_top_0_0_in_context.xdc] for cell 'relu_bd_i/relu_top_0'
 Parsing XDC File [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/ip/relu_bd_processing_system7_0_0/relu_bd_processing_system7_0_0/relu_bd_processing_system7_0_0_in_context.xdc] for cell 'relu_bd_i/processing_system7_0'
 Finished Parsing XDC File [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/ip/relu_bd_processing_system7_0_0/relu_bd_processing_system7_0_0/relu_bd_processing_system7_0_0_in_context.xdc] for cell 'relu_bd_i/processing_system7_0'
 Parsing XDC File [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/ip/relu_bd_auto_pc_0/relu_bd_auto_pc_0/relu_bd_auto_pc_0_in_context.xdc] for cell 'relu_bd_i/axi_mem_intercon/s00_couplers/auto_pc'
@@ -92,24 +90,26 @@ Parsing XDC File [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/
 Finished Parsing XDC File [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/ip/relu_bd_rst_ps7_0_100M_0/relu_bd_rst_ps7_0_100M_0/relu_bd_rst_ps7_0_100M_0_in_context.xdc] for cell 'relu_bd_i/rst_ps7_0_100M'
 Parsing XDC File [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/ip/relu_bd_auto_pc_1/relu_bd_auto_pc_1/relu_bd_auto_pc_1_in_context.xdc] for cell 'relu_bd_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/ip/relu_bd_auto_pc_1/relu_bd_auto_pc_1/relu_bd_auto_pc_1_in_context.xdc] for cell 'relu_bd_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/ip/relu_bd_relu_top_0_1/relu_bd_relu_top_0_1/relu_bd_relu_top_0_1_in_context.xdc] for cell 'relu_bd_i/relu_top_0'
+Finished Parsing XDC File [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/ip/relu_bd_relu_top_0_1/relu_bd_relu_top_0_1/relu_bd_relu_top_0_1_in_context.xdc] for cell 'relu_bd_i/relu_top_0'
 Parsing XDC File [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1268.504 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1272.277 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1268.504 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1272.277 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1271.926 ; gain = 145.262
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1272.277 ; gain = 146.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1271.926 ; gain = 145.262
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1272.277 ; gain = 146.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -375,18 +375,18 @@ Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_porb. (constraint 
 Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/ip/relu_bd_processing_system7_0_0/relu_bd_processing_system7_0_0/relu_bd_processing_system7_0_0_in_context.xdc, line 260).
 Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/ip/relu_bd_processing_system7_0_0/relu_bd_processing_system7_0_0/relu_bd_processing_system7_0_0_in_context.xdc, line 261).
 Applied set_property KEEP_HIERARCHY = SOFT for relu_bd_i. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for relu_bd_i/relu_top_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for relu_bd_i/processing_system7_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for relu_bd_i/axi_mem_intercon/s00_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for relu_bd_i/axi_mem_intercon. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for relu_bd_i/rst_ps7_0_100M. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for relu_bd_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for relu_bd_i/ps7_0_axi_periph. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for relu_bd_i/relu_top_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1271.926 ; gain = 145.262
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1272.277 ; gain = 146.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1271.926 ; gain = 145.262
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1272.277 ; gain = 146.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -408,25 +408,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1271.926 ; gain = 145.262
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1272.277 ; gain = 146.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1330.941 ; gain = 204.277
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1329.762 ; gain = 203.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1331.312 ; gain = 204.648
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1330.133 ; gain = 203.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1350.426 ; gain = 223.762
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1349.242 ; gain = 223.020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -444,37 +444,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1356.227 ; gain = 229.562
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1355.992 ; gain = 229.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1356.227 ; gain = 229.562
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1355.992 ; gain = 229.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1356.227 ; gain = 229.562
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1355.992 ; gain = 229.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1356.227 ; gain = 229.562
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1355.992 ; gain = 229.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1356.227 ; gain = 229.562
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1355.992 ; gain = 229.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1356.227 ; gain = 229.562
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1355.992 ; gain = 229.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -487,7 +487,7 @@ Report BlackBoxes:
 |1     |relu_bd_auto_pc_0              |         1|
 |2     |relu_bd_auto_pc_1              |         1|
 |3     |relu_bd_processing_system7_0_0 |         1|
-|4     |relu_bd_relu_top_0_0           |         1|
+|4     |relu_bd_relu_top_0_1           |         1|
 |5     |relu_bd_rst_ps7_0_100M_0       |         1|
 +------+-------------------------------+----------+
 
@@ -501,23 +501,23 @@ Report Cell Usage:
 |5     |relu_bd_rst_ps7_0_100M       |     1|
 +------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1356.227 ; gain = 229.562
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1355.992 ; gain = 229.770
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1356.227 ; gain = 207.086
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1356.227 ; gain = 229.562
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 1355.992 ; gain = 221.230
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1355.992 ; gain = 229.770
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1356.227 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1355.992 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1375.367 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1374.492 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 37 Infos, 18 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1379.402 ; gain = 252.738
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1378.496 ; gain = 252.273
 INFO: [Common 17-1381] The checkpoint 'C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/synth_1/relu_bd_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file relu_bd_wrapper_utilization_synth.rpt -pb relu_bd_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jan 26 14:27:30 2021...
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 27 01:41:34 2021...

@@ -19,12 +19,17 @@ file mkdir $outputDir
 create_project $vivadoProjectName $vivadoProjectDir -part $targetPart -force
 set_property target_language $language [current_project]
 
+# setup testbench files
+set simtbs [glob -nocomplain ./sim_tbs/*.v ./sim_tbs/*.vhd ./sim_tbs/*.sv ./sim_tbs/cdatafile/*.dat ./sim_tbs/rtldatafile/*.dat]
+if {$simtbs != "" } {
+    add_files -fileset sim_1  -norecurse $simtbs
+}
 
 # setup design sources and constraints
 set bd_design_name bd_0
 set bd_inst_name hls_inst
 set clock_freq_hz [expr {floor(1000 / $target_clk_period_ns) * 1000000}]
-set ip_vlnv xilinx.com:hls:relu_top:1.0
+set ip_vlnv xilinx.com:hls:relu_top:1.5
 set ip_repo_path {../ip}
 set assign_slr ""
 set bd_cell_properties {}
@@ -100,6 +105,7 @@ foreach run [get_runs -filter {IS_SYNTHESIS == 1}] {
 }
 
 
+update_compile_order -fileset sim_1
 set_property XPM_LIBRARIES {XPM_MEMORY XPM_FIFO} [current_project]
 
 # synth properties setting

@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Tue Jan 26 14:27:38 2021
-# Process ID: 4388
+# Start of session at: Wed Jan 27 01:41:41 2021
+# Process ID: 9304
 # Current directory: C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/impl_1
 # Command line: vivado.exe -log relu_bd_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source relu_bd_wrapper.tcl -notrace
 # Log file: C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/impl_1/relu_bd_wrapper.vdi

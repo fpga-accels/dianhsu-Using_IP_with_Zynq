@@ -166,6 +166,7 @@ proc create_root_design { parentCell } {
   # Create instance: axi_mem_intercon, and set properties
   set axi_mem_intercon [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_mem_intercon ]
   set_property -dict [ list \
+   CONFIG.ENABLE_ADVANCED_OPTIONS {0} \
    CONFIG.NUM_MI {1} \
  ] $axi_mem_intercon
 
@@ -575,7 +576,7 @@ proc create_root_design { parentCell } {
  ] $ps7_0_axi_periph
 
   # Create instance: relu_top_0, and set properties
-  set relu_top_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:relu_top:1.0 relu_top_0 ]
+  set relu_top_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:relu_top:1.5 relu_top_0 ]
 
   # Create instance: rst_ps7_0_100M, and set properties
   set rst_ps7_0_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_100M ]

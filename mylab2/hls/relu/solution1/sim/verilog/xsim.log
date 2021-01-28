@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Jan 27 03:01:06 2021
+# Process ID: 9556
+# Current directory: C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/hls/relu/solution1/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/relu_top/xsim_script.tcl}
+# Log file: C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/hls/relu/solution1/sim/verilog/xsim.log
+# Journal file: C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/hls/relu/solution1/sim/verilog\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/relu_top/xsim_script.tcl
+# xsim {relu_top} -autoloadwcfg -tclbatch {relu_top.tcl}
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source relu_top.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "2585000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 2625 ns : File "C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/hls/relu/solution1/sim/verilog/relu_top.autotb.v" Line 441
+## quit
+INFO: [Common 17-206] Exiting xsim at Wed Jan 27 03:01:10 2021...

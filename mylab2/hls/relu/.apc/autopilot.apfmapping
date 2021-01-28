@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="relu.h" path="C:\Users\dianhsu\Desktop\Using_IP_with_Zynq\mylab2\hls\relu.h"/>
+    <originFiles name="relu.cpp" path="C:\Users\dianhsu\Desktop\Using_IP_with_Zynq\mylab2\hls\relu.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="test_relu.cpp" path="C:\Users\dianhsu\Desktop\Using_IP_with_Zynq\mylab2\hls\test_relu.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

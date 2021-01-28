@@ -8,7 +8,7 @@ use IEEE.NUMERIC_STD.all;
 
 entity relu_top_control_s_axi is
 generic (
-    C_S_AXI_ADDR_WIDTH    : INTEGER := 5;
+    C_S_AXI_ADDR_WIDTH    : INTEGER := 6;
     C_S_AXI_DATA_WIDTH    : INTEGER := 32);
 port (
     ACLK                  :in   STD_LOGIC;
@@ -32,11 +32,12 @@ port (
     RVALID                :out  STD_LOGIC;
     RREADY                :in   STD_LOGIC;
     interrupt             :out  STD_LOGIC;
-    din                   :out  STD_LOGIC_VECTOR(63 downto 0);
     ap_start              :out  STD_LOGIC;
     ap_done               :in   STD_LOGIC;
     ap_ready              :in   STD_LOGIC;
-    ap_idle               :in   STD_LOGIC
+    ap_idle               :in   STD_LOGIC;
+    ap_return             :in   STD_LOGIC_VECTOR(31 downto 0);
+    din                   :out  STD_LOGIC_VECTOR(63 downto 0)
 );
 end entity relu_top_control_s_axi;
 
@@ -59,11 +60,13 @@ end entity relu_top_control_s_axi;
 --        bit 0  - ap_done (COR/TOW)
 --        bit 1  - ap_ready (COR/TOW)
 --        others - reserved
--- 0x10 : Data signal of din
+-- 0x10 : Data signal of ap_return
+--        bit 31~0 - ap_return[31:0] (Read)
+-- 0x18 : Data signal of din
 --        bit 31~0 - din[31:0] (Read/Write)
--- 0x14 : Data signal of din
+-- 0x1c : Data signal of din
 --        bit 31~0 - din[63:32] (Read/Write)
--- 0x18 : reserved
+-- 0x20 : reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 architecture behave of relu_top_control_s_axi is
@@ -71,14 +74,15 @@ architecture behave of relu_top_control_s_axi is
     signal wstate  : states := wrreset;
     signal rstate  : states := rdreset;
     signal wnext, rnext: states;
-    constant ADDR_AP_CTRL    : INTEGER := 16#00#;
-    constant ADDR_GIE        : INTEGER := 16#04#;
-    constant ADDR_IER        : INTEGER := 16#08#;
-    constant ADDR_ISR        : INTEGER := 16#0c#;
-    constant ADDR_DIN_DATA_0 : INTEGER := 16#10#;
-    constant ADDR_DIN_DATA_1 : INTEGER := 16#14#;
-    constant ADDR_DIN_CTRL   : INTEGER := 16#18#;
-    constant ADDR_BITS         : INTEGER := 5;
+    constant ADDR_AP_CTRL     : INTEGER := 16#00#;
+    constant ADDR_GIE         : INTEGER := 16#04#;
+    constant ADDR_IER         : INTEGER := 16#08#;
+    constant ADDR_ISR         : INTEGER := 16#0c#;
+    constant ADDR_AP_RETURN_0 : INTEGER := 16#10#;
+    constant ADDR_DIN_DATA_0  : INTEGER := 16#18#;
+    constant ADDR_DIN_DATA_1  : INTEGER := 16#1c#;
+    constant ADDR_DIN_CTRL    : INTEGER := 16#20#;
+    constant ADDR_BITS         : INTEGER := 6;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
     signal wmask               : UNSIGNED(C_S_AXI_DATA_WIDTH-1 downto 0);
@@ -100,6 +104,7 @@ architecture behave of relu_top_control_s_axi is
     signal int_gie             : STD_LOGIC := '0';
     signal int_ier             : UNSIGNED(1 downto 0) := (others => '0');
     signal int_isr             : UNSIGNED(1 downto 0) := (others => '0');
+    signal int_ap_return       : UNSIGNED(31 downto 0);
     signal int_din             : UNSIGNED(63 downto 0) := (others => '0');
 
 
@@ -228,6 +233,8 @@ begin
                         rdata_data(1 downto 0) <= int_ier;
                     when ADDR_ISR =>
                         rdata_data(1 downto 0) <= int_isr;
+                    when ADDR_AP_RETURN_0 =>
+                        rdata_data <= RESIZE(int_ap_return(31 downto 0), 32);
                     when ADDR_DIN_DATA_0 =>
                         rdata_data <= RESIZE(int_din(31 downto 0), 32);
                     when ADDR_DIN_DATA_1 =>
@@ -365,6 +372,19 @@ begin
                     int_isr(1) <= '1';
                 elsif (w_hs = '1' and waddr = ADDR_ISR and WSTRB(0) = '1') then
                     int_isr(1) <= int_isr(1) xor WDATA(1); -- toggle on write
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ARESET = '1') then
+                int_ap_return <= (others => '0');
+            elsif (ACLK_EN = '1') then
+                if (ap_done = '1') then
+                    int_ap_return <= UNSIGNED(ap_return);
                 end if;
             end if;
         end if;

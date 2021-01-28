@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Tue Jan 26 14:12:35 2021
+| Date         : Wed Jan 27 01:36:50 2021
 | Host         : Windows10-508 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -file ./report/relu_top_timing_routed.rpt
 | Design       : bd_0_wrapper
@@ -43,7 +43,7 @@ Table of Contents
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
 4. checking unconstrained_internal_endpoints (0)
-5. checking no_input_delay (92)
+5. checking no_input_delay (94)
 6. checking no_output_delay (212)
 7. checking multiple_clock (0)
 8. checking generated_clocks (0)
@@ -74,9 +74,9 @@ Table of Contents
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
-5. checking no_input_delay (92)
+5. checking no_input_delay (94)
 -------------------------------
- There are 92 input ports with no input delay specified. (HIGH)
+ There are 94 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
@@ -128,7 +128,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      2.945        0.000                      0                 4312        0.071        0.000                      0                 4312        4.020        0.000                       0                  2160  
+      2.862        0.000                      0                 4276        0.041        0.000                      0                 4276        4.020        0.000                       0                  2162  
 
 
 All user specified timing constraints are met.
@@ -151,7 +151,7 @@ ap_clk  {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-ap_clk              2.945        0.000                      0                 4312        0.071        0.000                      0                 4312        4.020        0.000                       0                  2160  
+ap_clk              2.862        0.000                      0                 4276        0.041        0.000                      0                 4276        4.020        0.000                       0                  2162  
 
 
 ------------------------------------------------------------------------------------------------
@@ -182,24 +182,24 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  ap_clk
   To Clock:  ap_clk
 
-Setup :            0  Failing Endpoints,  Worst Slack        2.945ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.071ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        2.862ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.041ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        4.020ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             2.945ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/sect_cnt_reg[9]/C
+Slack (MET) :             2.862ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/sect_cnt_reg[14]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/sect_cnt_reg[21]/CE
+  Destination:            bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/sect_cnt_reg[23]/CE
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        6.542ns  (logic 2.152ns (32.895%)  route 4.390ns (67.105%))
-  Logic Levels:           8  (CARRY4=5 LUT2=1 LUT5=1 LUT6=1)
+  Data Path Delay:        6.641ns  (logic 2.111ns (31.785%)  route 4.530ns (68.215%))
+  Logic Levels:           7  (CARRY4=4 LUT2=1 LUT5=1 LUT6=1)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -214,47 +214,44 @@ Slack (MET) :             2.945ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=2159, unset)         0.973     0.973    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/ap_clk
-    SLICE_X42Y50         FDRE                                         r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/sect_cnt_reg[9]/C
+                         net (fo=2161, unset)         0.973     0.973    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/ap_clk
+    SLICE_X51Y58         FDRE                                         r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/sect_cnt_reg[14]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X42Y50         FDRE (Prop_fdre_C_Q)         0.478     1.451 r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/sect_cnt_reg[9]/Q
-                         net (fo=4, routed)           1.190     2.641    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/sect_cnt_reg_n_0_[9]
-    SLICE_X44Y52         LUT6 (Prop_lut6_I2_O)        0.295     2.936 r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/last_sect_carry_i_1__0/O
-                         net (fo=1, routed)           0.000     2.936    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/last_sect_carry_i_1__0_n_0
-    SLICE_X44Y52         CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.401     3.337 r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/last_sect_carry/CO[3]
-                         net (fo=1, routed)           0.000     3.337    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/last_sect_carry_n_0
-    SLICE_X44Y53         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     3.451 r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/last_sect_carry__0/CO[3]
-                         net (fo=1, routed)           0.000     3.451    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/last_sect_carry__0_n_0
-    SLICE_X44Y54         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     3.565 r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/last_sect_carry__1/CO[3]
-                         net (fo=1, routed)           0.000     3.565    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/last_sect_carry__1_n_0
-    SLICE_X44Y55         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     3.679 r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/last_sect_carry__2/CO[3]
-                         net (fo=1, routed)           0.000     3.679    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/last_sect_carry__2_n_0
-    SLICE_X44Y56         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157     3.836 r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/last_sect_carry__3/CO[1]
-                         net (fo=14, routed)          1.187     5.023    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/fifo_rreq/fifo_rreq_valid_buf_reg_0[0]
-    SLICE_X44Y46         LUT5 (Prop_lut5_I2_O)        0.329     5.352 r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/fifo_rreq/fifo_rreq_valid_buf_i_1/O
-                         net (fo=182, routed)         1.202     6.554    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/fifo_rreq/next_rreq
-    SLICE_X42Y57         LUT2 (Prop_lut2_I0_O)        0.150     6.704 r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/fifo_rreq/sect_cnt[51]_i_1__0/O
-                         net (fo=52, routed)          0.811     7.515    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/fifo_rreq_n_2
-    SLICE_X45Y53         FDRE                                         r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/sect_cnt_reg[21]/CE
+    SLICE_X51Y58         FDRE (Prop_fdre_C_Q)         0.419     1.392 r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/sect_cnt_reg[14]/Q
+                         net (fo=4, routed)           1.200     2.592    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/sect_cnt_reg_n_0_[14]
+    SLICE_X49Y62         LUT6 (Prop_lut6_I1_O)        0.297     2.889 r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/last_sect_carry__0_i_4/O
+                         net (fo=1, routed)           0.000     2.889    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/last_sect_carry__0_i_4_n_0
+    SLICE_X49Y62         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     3.421 r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/last_sect_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     3.421    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/last_sect_carry__0_n_0
+    SLICE_X49Y63         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.535 r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/last_sect_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     3.535    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/last_sect_carry__1_n_0
+    SLICE_X49Y64         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.649 r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/last_sect_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     3.649    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/last_sect_carry__2_n_0
+    SLICE_X49Y65         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     3.806 r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/last_sect_carry__3/CO[1]
+                         net (fo=19, routed)          1.126     4.932    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/bus_equal_gen.fifo_burst/CO[0]
+    SLICE_X47Y52         LUT5 (Prop_lut5_I1_O)        0.329     5.261 r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/bus_equal_gen.fifo_burst/fifo_wreq_valid_buf_i_1/O
+                         net (fo=182, routed)         1.375     6.636    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/bus_equal_gen.fifo_burst/next_wreq
+    SLICE_X51Y67         LUT2 (Prop_lut2_I1_O)        0.149     6.785 r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/bus_equal_gen.fifo_burst/sect_cnt[51]_i_1/O
+                         net (fo=52, routed)          0.829     7.614    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/bus_equal_gen.fifo_burst_n_5
+    SLICE_X52Y61         FDRE                                         r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/sect_cnt_reg[23]/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=2159, unset)         0.924    10.924    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/ap_clk
-    SLICE_X45Y53         FDRE                                         r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/sect_cnt_reg[21]/C
+                         net (fo=2161, unset)         0.924    10.924    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/ap_clk
+    SLICE_X52Y61         FDRE                                         r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/sect_cnt_reg[23]/C
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
-    SLICE_X45Y53         FDRE (Setup_fdre_C_CE)      -0.429    10.460    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/sect_cnt_reg[21]
+    SLICE_X52Y61         FDRE (Setup_fdre_C_CE)      -0.413    10.476    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/sect_cnt_reg[23]
   -------------------------------------------------------------------
-                         required time                         10.460    
-                         arrival time                          -7.515    
+                         required time                         10.476    
+                         arrival time                          -7.614    
   -------------------------------------------------------------------
-                         slack                                  2.945    
+                         slack                                  2.862    
 
 
 
@@ -262,15 +259,15 @@ Slack (MET) :             2.945ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.071ns  (arrival time - required time)
-  Source:                 bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[39]/C
+Slack (MET) :             0.041ns  (arrival time - required time)
+  Source:                 bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/rs_wreq/data_p1_reg[47]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/fifo_rreq/mem_reg[4][39]_srl5/D
+  Destination:            bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/fifo_wreq/mem_reg[4][47]_srl5/D
                             (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        0.276ns  (logic 0.164ns (59.419%)  route 0.112ns (40.581%))
+  Data Path Delay:        0.246ns  (logic 0.141ns (57.415%)  route 0.105ns (42.585%))
   Logic Levels:           0  
   Clock Path Skew:        0.022ns (DCD - SCD - CPR)
     Destination Clock Delay (DCD):    0.432ns
@@ -281,26 +278,26 @@ Slack (MET) :             0.071ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=2159, unset)         0.410     0.410    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/rs_rreq/ap_clk
-    SLICE_X38Y53         FDRE                                         r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[39]/C
+                         net (fo=2161, unset)         0.410     0.410    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/rs_wreq/ap_clk
+    SLICE_X44Y65         FDRE                                         r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/rs_wreq/data_p1_reg[47]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X38Y53         FDRE (Prop_fdre_C_Q)         0.164     0.574 r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[39]/Q
-                         net (fo=1, routed)           0.112     0.686    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/fifo_rreq/q_reg[61]_0[39]
-    SLICE_X38Y54         SRL16E                                       r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/fifo_rreq/mem_reg[4][39]_srl5/D
+    SLICE_X44Y65         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/rs_wreq/data_p1_reg[47]/Q
+                         net (fo=1, routed)           0.105     0.656    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/fifo_wreq/q_reg[61]_0[47]
+    SLICE_X46Y64         SRL16E                                       r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/fifo_wreq/mem_reg[4][47]_srl5/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=2159, unset)         0.432     0.432    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/fifo_rreq/ap_clk
-    SLICE_X38Y54         SRL16E                                       r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/fifo_rreq/mem_reg[4][39]_srl5/CLK
+                         net (fo=2161, unset)         0.432     0.432    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/fifo_wreq/ap_clk
+    SLICE_X46Y64         SRL16E                                       r  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/fifo_wreq/mem_reg[4][47]_srl5/CLK
                          clock pessimism              0.000     0.432    
-    SLICE_X38Y54         SRL16E (Hold_srl16e_CLK_D)
-                                                      0.183     0.615    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/fifo_rreq/mem_reg[4][39]_srl5
+    SLICE_X46Y64         SRL16E (Hold_srl16e_CLK_D)
+                                                      0.183     0.615    bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/fifo_wreq/mem_reg[4][47]_srl5
   -------------------------------------------------------------------
                          required time                         -0.615    
-                         arrival time                           0.686    
+                         arrival time                           0.656    
   -------------------------------------------------------------------
-                         slack                                  0.071    
+                         slack                                  0.041    
 
 
 
@@ -314,9 +311,9 @@ Period(ns):         10.000
 Sources:            { ap_clk }
 
 Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
-Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.944         10.000      7.056      RAMB18_X1Y14  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/buff_rdata/mem_reg/CLKARDCLK
-Low Pulse Width   Fast    SRL16E/CLK          n/a            0.980         5.000       4.020      SLICE_X38Y58  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/fifo_rreq/mem_reg[4][54]_srl5/CLK
-High Pulse Width  Slow    SRL16E/CLK          n/a            0.980         5.000       4.020      SLICE_X38Y58  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/fifo_rreq/mem_reg[4][54]_srl5/CLK
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.944         10.000      7.056      RAMB18_X1Y18  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_read/buff_rdata/mem_reg/CLKARDCLK
+Low Pulse Width   Fast    SRL16E/CLK          n/a            0.980         5.000       4.020      SLICE_X46Y47  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/fifo_resp/mem_reg[14][0]_srl15/CLK
+High Pulse Width  Slow    SRL16E/CLK          n/a            0.980         5.000       4.020      SLICE_X46Y47  bd_0_i/hls_inst/inst/gmem_m_axi_U/bus_write/fifo_resp/mem_reg[14][0]_srl15/CLK
 
 
 

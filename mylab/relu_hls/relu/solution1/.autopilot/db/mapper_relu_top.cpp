@@ -32,8 +32,8 @@ class AESL_RUNTIME_BC {
     fstream file_token;
     string mName;
 };
-extern "C" void relu_top(int*, int);
-extern "C" void apatb_relu_top_hw(volatile void * __xlx_apatb_param_din) {
+extern "C" int relu_top(int*, int);
+extern "C" int apatb_relu_top_hw(volatile void * __xlx_apatb_param_din) {
   // Collect __xlx_din__tmp_vec
   vector<sc_bv<32> >__xlx_din__tmp_vec;
   for (int j = 0, e = 49152; j != e; ++j) {
@@ -47,7 +47,7 @@ extern "C" void apatb_relu_top_hw(volatile void * __xlx_apatb_param_din) {
     __xlx_din__input_buffer[i] = __xlx_din__tmp_vec[i].range(31, 0).to_uint64();
   }
   // DUT call
-  relu_top(__xlx_din__input_buffer, __xlx_offset_byte_param_din);
+  int ap_return = relu_top(__xlx_din__input_buffer, __xlx_offset_byte_param_din);
 // print __xlx_apatb_param_din
   sc_bv<32>*__xlx_din_output_buffer = new sc_bv<32>[__xlx_size_param_din];
   for (int i = 0; i < __xlx_size_param_din; ++i) {
@@ -56,4 +56,5 @@ extern "C" void apatb_relu_top_hw(volatile void * __xlx_apatb_param_din) {
   for (int i = 0; i < __xlx_size_param_din; ++i) {
     ((int*)__xlx_apatb_param_din)[i] = __xlx_din_output_buffer[i].to_uint64();
   }
+return ap_return;
 }

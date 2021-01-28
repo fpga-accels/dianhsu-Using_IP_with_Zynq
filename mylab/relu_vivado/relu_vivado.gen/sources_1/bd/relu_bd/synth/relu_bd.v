@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-//Date        : Tue Jan 26 14:24:11 2021
+//Date        : Wed Jan 27 01:39:21 2021
 //Host        : Windows10-508 running 64-bit major release  (build 9200)
 //Command     : generate_target relu_bd.bd
 //Design      : relu_bd
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "relu_bd,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=relu_bd,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=9,numReposBlks=5,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "relu_bd.hwdef" *) 
+(* CORE_GENERATION_INFO = "relu_bd,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=relu_bd,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=9,numReposBlks=5,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "relu_bd.hwdef" *) 
 module relu_bd
    (DDR_addr,
     DDR_ba,
@@ -444,7 +444,7 @@ module relu_bd
         .S00_AXI_wready(processing_system7_0_M_AXI_GP0_WREADY),
         .S00_AXI_wstrb(processing_system7_0_M_AXI_GP0_WSTRB),
         .S00_AXI_wvalid(processing_system7_0_M_AXI_GP0_WVALID));
-  relu_bd_relu_top_0_0 relu_top_0
+  relu_bd_relu_top_0_1 relu_top_0
        (.ap_clk(processing_system7_0_FCLK_CLK0),
         .ap_rst_n(rst_ps7_0_100M_peripheral_aresetn),
         .interrupt(relu_top_0_interrupt),
@@ -483,10 +483,10 @@ module relu_bd
         .m_axi_gmem_WREADY(relu_top_0_m_axi_gmem_WREADY),
         .m_axi_gmem_WSTRB(relu_top_0_m_axi_gmem_WSTRB),
         .m_axi_gmem_WVALID(relu_top_0_m_axi_gmem_WVALID),
-        .s_axi_control_ARADDR(ps7_0_axi_periph_M00_AXI_ARADDR[4:0]),
+        .s_axi_control_ARADDR(ps7_0_axi_periph_M00_AXI_ARADDR[5:0]),
         .s_axi_control_ARREADY(ps7_0_axi_periph_M00_AXI_ARREADY),
         .s_axi_control_ARVALID(ps7_0_axi_periph_M00_AXI_ARVALID),
-        .s_axi_control_AWADDR(ps7_0_axi_periph_M00_AXI_AWADDR[4:0]),
+        .s_axi_control_AWADDR(ps7_0_axi_periph_M00_AXI_AWADDR[5:0]),
         .s_axi_control_AWREADY(ps7_0_axi_periph_M00_AXI_AWREADY),
         .s_axi_control_AWVALID(ps7_0_axi_periph_M00_AXI_AWVALID),
         .s_axi_control_BREADY(ps7_0_axi_periph_M00_AXI_BREADY),

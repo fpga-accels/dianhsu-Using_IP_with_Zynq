@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'relu_top'" level="0">
-<item name = "Date">Tue Jan 26 14:08:04 2021
+<item name = "Date">Wed Jan 27 01:30:54 2021
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)</item>
 <item name = "Project">relu</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">836359, 836359, 8.364 ms, 8.364 ms, 836360, 836360, none</column>
+<column name="">639751, 885511, 6.398 ms, 8.855 ms, 639752, 885512, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,9 +35,9 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- relu_top_label0">836358, 836358, 278786, -, -, 3, no</column>
-<column name=" + relu_top_label1">278784, 278784, 2178, -, -, 128, no</column>
-<column name="  ++ relu_top_label2">2176, 2176, 17, -, -, 128, no</column>
+<column name="- relu_top_label0">639750, 885510, 213250 ~ 295170, -, -, 3, no</column>
+<column name=" + relu_top_label1">213248, 295168, 1666 ~ 2306, -, -, 128, no</column>
+<column name="  ++ relu_top_label2">1664, 2304, 13 ~ 18, -, -, 128, no</column>
 </table>
 </item>
 </section>

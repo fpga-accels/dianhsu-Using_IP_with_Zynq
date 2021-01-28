@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
 // Date        : Tue Jan 26 14:25:12 2021
 // Host        : Windows10-508 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/ip/relu_bd_processing_system7_0_0/relu_bd_processing_system7_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top relu_bd_processing_system7_0_0 -prefix
+//               relu_bd_processing_system7_0_0_ relu_bd_processing_system7_0_0_stub.v
 // Design      : relu_bd_processing_system7_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1

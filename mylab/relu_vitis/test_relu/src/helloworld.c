@@ -94,7 +94,7 @@ int main() {
 		exit(-1);
 	}
 	u64 ptr = (u64)data;
-	printf("%d %lld\n\r", data, ptr);
+	printf("%x %llx\n\r", data, ptr);
 	XRelu_top_Set_din(&ReluTop, ptr);
 
 	if (XRelu_top_IsReady(&ReluTop))
@@ -122,6 +122,7 @@ int main() {
 			}
 		}
 	}
+	printf("Sum: %d, Pointer %llx, Return %ld\n\r", 3 * 128 * 128, XRelu_top_Get_din(&ReluTop), XRelu_top_Get_return(&ReluTop));
 	printf("low: %d, equal: %d, high: %d\n\r", low, equal, high);
 	cleanup_platform();
 	return 0;

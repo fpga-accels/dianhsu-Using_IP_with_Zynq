@@ -19,31 +19,76 @@
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>836359</Best-caseLatency>
-            <Average-caseLatency>836359</Average-caseLatency>
-            <Worst-caseLatency>836359</Worst-caseLatency>
-            <Best-caseRealTimeLatency>8.364 ms</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>8.364 ms</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>8.364 ms</Worst-caseRealTimeLatency>
-            <Interval-min>836360</Interval-min>
-            <Interval-max>836360</Interval-max>
+            <Best-caseLatency>639751</Best-caseLatency>
+            <Average-caseLatency>787207</Average-caseLatency>
+            <Worst-caseLatency>885511</Worst-caseLatency>
+            <Best-caseRealTimeLatency>6.398 ms</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>7.872 ms</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>8.855 ms</Worst-caseRealTimeLatency>
+            <Interval-min>639752</Interval-min>
+            <Interval-max>885512</Interval-max>
         </SummaryOfOverallLatency>
         <SummaryOfLoopLatency>
             <relu_top_label0>
                 <TripCount>3</TripCount>
-                <Latency>836358</Latency>
-                <AbsoluteTimeLatency>8363580</AbsoluteTimeLatency>
-                <IterationLatency>278786</IterationLatency>
+                <Latency>
+                    <range>
+                        <min>639750</min>
+                        <max>885510</max>
+                    </range>
+                </Latency>
+                <AbsoluteTimeLatency>
+                    <range>
+                        <min>6397500</min>
+                        <max>8855100</max>
+                    </range>
+                </AbsoluteTimeLatency>
+                <IterationLatency>
+                    <range>
+                        <min>213250</min>
+                        <max>295170</max>
+                    </range>
+                </IterationLatency>
                 <relu_top_label1>
                     <TripCount>128</TripCount>
-                    <Latency>278784</Latency>
-                    <AbsoluteTimeLatency>2787840</AbsoluteTimeLatency>
-                    <IterationLatency>2178</IterationLatency>
+                    <Latency>
+                        <range>
+                            <min>213248</min>
+                            <max>295168</max>
+                        </range>
+                    </Latency>
+                    <AbsoluteTimeLatency>
+                        <range>
+                            <min>2132480</min>
+                            <max>2951680</max>
+                        </range>
+                    </AbsoluteTimeLatency>
+                    <IterationLatency>
+                        <range>
+                            <min>1666</min>
+                            <max>2306</max>
+                        </range>
+                    </IterationLatency>
                     <relu_top_label2>
                         <TripCount>128</TripCount>
-                        <Latency>2176</Latency>
-                        <AbsoluteTimeLatency>21760</AbsoluteTimeLatency>
-                        <IterationLatency>17</IterationLatency>
+                        <Latency>
+                            <range>
+                                <min>1664</min>
+                                <max>2304</max>
+                            </range>
+                        </Latency>
+                        <AbsoluteTimeLatency>
+                            <range>
+                                <min>16640</min>
+                                <max>23040</max>
+                            </range>
+                        </AbsoluteTimeLatency>
+                        <IterationLatency>
+                            <range>
+                                <min>13</min>
+                                <max>18</max>
+                            </range>
+                        </IterationLatency>
                     </relu_top_label2>
                 </relu_top_label1>
             </relu_top_label0>
@@ -52,8 +97,8 @@
     <AreaEstimates>
         <Resources>
             <BRAM_18K>2</BRAM_18K>
-            <FF>963</FF>
-            <LUT>1200</LUT>
+            <FF>998</FF>
+            <LUT>1289</LUT>
             <DSP>0</DSP>
             <URAM>0</URAM>
         </Resources>
@@ -100,7 +145,7 @@
             <IOProtocol>s_axi</IOProtocol>
             <IOConfig/>
             <Dir>in</Dir>
-            <Bits>5</Bits>
+            <Bits>6</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
             <HasCtrl>1</HasCtrl>
@@ -191,7 +236,7 @@
             <IOProtocol>s_axi</IOProtocol>
             <IOConfig/>
             <Dir>in</Dir>
-            <Bits>5</Bits>
+            <Bits>6</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
             <HasCtrl>1</HasCtrl>
@@ -876,37 +921,52 @@
                     <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>836359</Best-caseLatency>
-                    <Average-caseLatency>836359</Average-caseLatency>
-                    <Worst-caseLatency>836359</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>8.364 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>8.364 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>8.364 ms</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>836360</PipelineInitiationInterval>
+                    <Best-caseLatency>639751</Best-caseLatency>
+                    <Average-caseLatency>787207</Average-caseLatency>
+                    <Worst-caseLatency>885511</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>6.398 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>7.872 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>8.855 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>639752 ~ 885512</PipelineInitiationInterval>
                     <PipelineType>none</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <relu_top_label0>
                         <Name>relu_top_label0</Name>
                         <TripCount>3</TripCount>
-                        <Latency>836358</Latency>
-                        <AbsoluteTimeLatency>8.364 ms</AbsoluteTimeLatency>
-                        <IterationLatency>278786</IterationLatency>
-                        <PipelineDepth>278786</PipelineDepth>
+                        <Latency>639750 ~ 885510</Latency>
+                        <AbsoluteTimeLatency>6.397 ms ~ 8.855 ms</AbsoluteTimeLatency>
+                        <IterationLatency>
+                            <range>
+                                <min>213250</min>
+                                <max>295170</max>
+                            </range>
+                        </IterationLatency>
+                        <PipelineDepth>213250 ~ 295170</PipelineDepth>
                         <relu_top_label1>
                             <Name>relu_top_label1</Name>
                             <TripCount>128</TripCount>
-                            <Latency>278784</Latency>
-                            <AbsoluteTimeLatency>2.788 ms</AbsoluteTimeLatency>
-                            <IterationLatency>2178</IterationLatency>
-                            <PipelineDepth>2178</PipelineDepth>
+                            <Latency>213248 ~ 295168</Latency>
+                            <AbsoluteTimeLatency>2.132 ms ~ 2.952 ms</AbsoluteTimeLatency>
+                            <IterationLatency>
+                                <range>
+                                    <min>1666</min>
+                                    <max>2306</max>
+                                </range>
+                            </IterationLatency>
+                            <PipelineDepth>1666 ~ 2306</PipelineDepth>
                             <relu_top_label2>
                                 <Name>relu_top_label2</Name>
                                 <TripCount>128</TripCount>
-                                <Latency>2176</Latency>
-                                <AbsoluteTimeLatency>21.760 us</AbsoluteTimeLatency>
-                                <IterationLatency>17</IterationLatency>
-                                <PipelineDepth>17</PipelineDepth>
+                                <Latency>1664 ~ 2304</Latency>
+                                <AbsoluteTimeLatency>16.640 us ~ 23.040 us</AbsoluteTimeLatency>
+                                <IterationLatency>
+                                    <range>
+                                        <min>13</min>
+                                        <max>18</max>
+                                    </range>
+                                </IterationLatency>
+                                <PipelineDepth>13 ~ 18</PipelineDepth>
                             </relu_top_label2>
                         </relu_top_label1>
                     </relu_top_label0>
@@ -917,10 +977,10 @@
                     <BRAM_18K>2</BRAM_18K>
                     <AVAIL_BRAM>280</AVAIL_BRAM>
                     <UTIL_BRAM>~0</UTIL_BRAM>
-                    <FF>963</FF>
+                    <FF>998</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>1200</LUT>
+                    <LUT>1289</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
                     <UTIL_LUT>2</UTIL_LUT>
                     <DSP>0</DSP>
@@ -966,7 +1026,7 @@
                     <IOProtocol>s_axi</IOProtocol>
                     <IOConfig/>
                     <Dir>in</Dir>
-                    <Bits>5</Bits>
+                    <Bits>6</Bits>
                     <Attribute>unknown</Attribute>
                     <CType>int</CType>
                     <HasCtrl>1</HasCtrl>
@@ -1057,7 +1117,7 @@
                     <IOProtocol>s_axi</IOProtocol>
                     <IOConfig/>
                     <Dir>in</Dir>
-                    <Bits>5</Bits>
+                    <Bits>6</Bits>
                     <Attribute>unknown</Attribute>
                     <CType>int</CType>
                     <HasCtrl>1</HasCtrl>
@@ -1739,6 +1799,9 @@
             </hwRefs>
         </Arg>
     </Args>
+    <ReturnValue ReturnValueName="srcType">int</ReturnValue>
+    <ReturnValue ReturnValueName="srcSize">32</ReturnValue>
+    <ReturnValue ReturnValueName="hwRefs" type="register" interface="s_axi_control" name="ap_return" usage="data" direction="out"/>
     <Interfaces>
         <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
             <busParams>
@@ -1838,7 +1901,7 @@
                 <constraint constraint_type="bitwidth" orig_bitwidth="32" final_bitwidth="32" argName="din"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="s_axi_control" type="axi4lite" busTypeName="aximm" mode="slave" dataWidth="32" addrWidth="5" portPrefix="s_axi_control_" paramPrefix="C_S_AXI_CONTROL_" offsetMasterName="m_axi_gmem">
+        <Interface InterfaceName="s_axi_control" type="axi4lite" busTypeName="aximm" mode="slave" dataWidth="32" addrWidth="6" portPrefix="s_axi_control_" paramPrefix="C_S_AXI_CONTROL_" offsetMasterName="m_axi_gmem">
             <ports>
                 <port>s_axi_control_ARADDR</port>
                 <port>s_axi_control_ARREADY</port>
@@ -1890,19 +1953,24 @@
                         <field offset="2" width="30" name="RESERVED" access="R" resetValue="0" description="Reserved.  0s on read."/>
                     </fields>
                 </register>
-                <register offset="0x10" name="din_1" access="W" resetValue="0x0" description="Data signal of din" range="32">
+                <register offset="0x10" name="ap_return" access="R" resetValue="0x0" description="Data signal of ap_return" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="ap_return" access="R" resetValue="0" description="Bit 31 to 0 of ap_return"/>
+                    </fields>
+                </register>
+                <register offset="0x18" name="din_1" access="W" resetValue="0x0" description="Data signal of din" range="32">
                     <fields>
                         <field offset="0" width="32" name="din" access="W" resetValue="0" description="Bit 31 to 0 of din"/>
                     </fields>
                 </register>
-                <register offset="0x14" name="din_2" access="W" resetValue="0x0" description="Data signal of din" range="32">
+                <register offset="0x1c" name="din_2" access="W" resetValue="0x0" description="Data signal of din" range="32">
                     <fields>
                         <field offset="0" width="32" name="din" access="W" resetValue="0" description="Bit 63 to 32 of din"/>
                     </fields>
                 </register>
             </registers>
             <constraints>
-                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16" argName="din"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="24" argName="din"/>
             </constraints>
         </Interface>
     </Interfaces>
@@ -1917,7 +1985,7 @@
             <item name="S_AXILITE">
                 <table>
                     <keys size="6">Interface, Data Width, Address Width, Offset, Register, Data Interface</keys>
-                    <column name="s_axi_control">32, 5, 16, 0, m_axi_gmem</column>
+                    <column name="s_axi_control">32, 6, 24, 0, m_axi_gmem</column>
                 </table>
             </item>
             <item name="TOP LEVEL CONTROL">
@@ -1937,14 +2005,16 @@
                 <table isCollapsed="1">
                     <keys size="3">Argument, Direction, Datatype</keys>
                     <column name="din">inout, float*</column>
+                    <column name="return">out, int</column>
                 </table>
             </item>
             <item name="SW-to-HW Mapping">
                 <table isCollapsed="1">
                     <keys size="5">Argument, HW Name, HW Type, HW Usage, HW Info</keys>
                     <column name="din">m_axi_gmem, interface, , </column>
-                    <column name="din">s_axi_control din_1, register, offset, offset=0x10 range=32</column>
-                    <column name="din">s_axi_control din_2, register, offset, offset=0x14 range=32</column>
+                    <column name="din">s_axi_control din_1, register, offset, offset=0x18 range=32</column>
+                    <column name="din">s_axi_control din_2, register, offset, offset=0x1c range=32</column>
+                    <column name="return">s_axi_control ap_return, register, , offset=0x10 range=32</column>
                 </table>
             </item>
         </section>
@@ -1954,8 +2024,8 @@
             <item name="Burst Missed">
                 <table>
                     <keys size="5">HW Interface, Variable, Problem, Resolution, Location</keys>
-                    <column name="m_axi_gmem">din, Access is clobbered by load, 214-231, relu.cpp:6:18</column>
-                    <column name="m_axi_gmem">din, Access is clobbered by store, 214-231, relu.cpp:6:20</column>
+                    <column name="m_axi_gmem">din, Access store is in the conditional branch, 214-232, relu.cpp:10:19</column>
+                    <column name="m_axi_gmem">din, Access is clobbered by store, 214-231, relu.cpp:7:8</column>
                 </table>
             </item>
         </section>

@@ -86,6 +86,7 @@ u32 XRelu_top_IsIdle(XRelu_top *InstancePtr);
 u32 XRelu_top_IsReady(XRelu_top *InstancePtr);
 void XRelu_top_EnableAutoRestart(XRelu_top *InstancePtr);
 void XRelu_top_DisableAutoRestart(XRelu_top *InstancePtr);
+u32 XRelu_top_Get_return(XRelu_top *InstancePtr);
 
 void XRelu_top_Set_din(XRelu_top *InstancePtr, u64 Data);
 u64 XRelu_top_Get_din(XRelu_top *InstancePtr);

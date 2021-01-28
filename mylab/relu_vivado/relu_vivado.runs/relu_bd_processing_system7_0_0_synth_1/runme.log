@@ -287,3 +287,22 @@ INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP relu_bd_process
 INFO: [Common 17-1381] The checkpoint 'C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.runs/relu_bd_processing_system7_0_0_synth_1/relu_bd_processing_system7_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file relu_bd_processing_system7_0_0_utilization_synth.rpt -pb relu_bd_processing_system7_0_0_utilization_synth.pb
 INFO: [Common 17-206] Exiting Vivado at Tue Jan 26 14:25:12 2021...
+
+*** Running vivado
+    with args -log relu_bd_processing_system7_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source relu_bd_processing_system7_0_0.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source relu_bd_processing_system7_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_hls/relu/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.cache/ip 
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP relu_bd_processing_system7_0_0, cache-ID = e638bacb493faa01.
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 26 16:34:12 2021...

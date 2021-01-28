@@ -15,8 +15,7 @@ platform create -name {zed_hw}\
 platform write
 platform generate -domains 
 platform active {zed_hw}
-platform generate
-platform clean
+catch {platform remove zed_hw2}
 platform generate
 platform clean
 platform generate

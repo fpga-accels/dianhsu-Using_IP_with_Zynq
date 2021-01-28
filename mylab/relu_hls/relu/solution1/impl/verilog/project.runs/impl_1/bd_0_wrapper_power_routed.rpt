@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Tue Jan 26 14:12:27 2021
+| Date             : Wed Jan 27 01:36:43 2021
 | Host             : Windows10-508 running 64-bit major release  (build 9200)
 | Command          : report_power -file bd_0_wrapper_power_routed.rpt -pb bd_0_wrapper_power_summary_routed.pb -rpx bd_0_wrapper_power_routed.rpx
 | Design           : bd_0_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.123        |
+| Total On-Chip Power (W)  | 0.121        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.020        |
+| Dynamic (W)              | 0.018        |
 | Device Static (W)        | 0.103        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 83.6         |
@@ -52,17 +52,17 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.008 |        3 |       --- |             --- |
-| Slice Logic             |     0.003 |     3617 |       --- |             --- |
-|   LUT as Logic          |     0.003 |      916 |     53200 |            1.72 |
-|   Register              |    <0.001 |     2024 |    106400 |            1.90 |
-|   CARRY4                |    <0.001 |      154 |     13300 |            1.16 |
+| Clocks                  |     0.007 |        3 |       --- |             --- |
+| Slice Logic             |     0.003 |     3629 |       --- |             --- |
+|   LUT as Logic          |     0.003 |      923 |     53200 |            1.73 |
+|   CARRY4                |    <0.001 |      162 |     13300 |            1.22 |
+|   Register              |    <0.001 |     2026 |    106400 |            1.90 |
 |   LUT as Shift Register |    <0.001 |       72 |     17400 |            0.41 |
 |   Others                |     0.000 |       48 |       --- |             --- |
-| Signals                 |     0.003 |     2576 |       --- |             --- |
+| Signals                 |     0.003 |     2590 |       --- |             --- |
 | Block RAM               |     0.005 |        1 |       140 |            0.71 |
 | Static Power            |     0.103 |          |           |                 |
-| Total                   |     0.123 |          |           |                 |
+| Total                   |     0.121 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.027 |       0.020 |      0.008 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.025 |       0.018 |      0.008 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.010 |       0.000 |      0.010 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -148,10 +148,10 @@ Table of Contents
 +--------------+-----------+
 | Name         | Power (W) |
 +--------------+-----------+
-| bd_0_wrapper |     0.020 |
-|   bd_0_i     |     0.020 |
-|     hls_inst |     0.020 |
-|       inst   |     0.020 |
+| bd_0_wrapper |     0.018 |
+|   bd_0_i     |     0.018 |
+|     hls_inst |     0.018 |
+|       inst   |     0.018 |
 +--------------+-----------+
 
 

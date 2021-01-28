@@ -5,7 +5,7 @@
 `timescale 1ns/1ps
 module relu_top_control_s_axi
 #(parameter
-    C_S_AXI_ADDR_WIDTH = 5,
+    C_S_AXI_ADDR_WIDTH = 6,
     C_S_AXI_DATA_WIDTH = 32
 )(
     input  wire                          ACLK,
@@ -29,11 +29,12 @@ module relu_top_control_s_axi
     output wire                          RVALID,
     input  wire                          RREADY,
     output wire                          interrupt,
-    output wire [63:0]                   din,
     output wire                          ap_start,
     input  wire                          ap_done,
     input  wire                          ap_ready,
-    input  wire                          ap_idle
+    input  wire                          ap_idle,
+    input  wire [31:0]                   ap_return,
+    output wire [63:0]                   din
 );
 //------------------------Address Info-------------------
 // 0x00 : Control signals
@@ -54,30 +55,33 @@ module relu_top_control_s_axi
 //        bit 0  - ap_done (COR/TOW)
 //        bit 1  - ap_ready (COR/TOW)
 //        others - reserved
-// 0x10 : Data signal of din
+// 0x10 : Data signal of ap_return
+//        bit 31~0 - ap_return[31:0] (Read)
+// 0x18 : Data signal of din
 //        bit 31~0 - din[31:0] (Read/Write)
-// 0x14 : Data signal of din
+// 0x1c : Data signal of din
 //        bit 31~0 - din[63:32] (Read/Write)
-// 0x18 : reserved
+// 0x20 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_AP_CTRL    = 5'h00,
-    ADDR_GIE        = 5'h04,
-    ADDR_IER        = 5'h08,
-    ADDR_ISR        = 5'h0c,
-    ADDR_DIN_DATA_0 = 5'h10,
-    ADDR_DIN_DATA_1 = 5'h14,
-    ADDR_DIN_CTRL   = 5'h18,
-    WRIDLE          = 2'd0,
-    WRDATA          = 2'd1,
-    WRRESP          = 2'd2,
-    WRRESET         = 2'd3,
-    RDIDLE          = 2'd0,
-    RDDATA          = 2'd1,
-    RDRESET         = 2'd2,
-    ADDR_BITS                = 5;
+    ADDR_AP_CTRL     = 6'h00,
+    ADDR_GIE         = 6'h04,
+    ADDR_IER         = 6'h08,
+    ADDR_ISR         = 6'h0c,
+    ADDR_AP_RETURN_0 = 6'h10,
+    ADDR_DIN_DATA_0  = 6'h18,
+    ADDR_DIN_DATA_1  = 6'h1c,
+    ADDR_DIN_CTRL    = 6'h20,
+    WRIDLE           = 2'd0,
+    WRDATA           = 2'd1,
+    WRRESP           = 2'd2,
+    WRRESET          = 2'd3,
+    RDIDLE           = 2'd0,
+    RDDATA           = 2'd1,
+    RDRESET          = 2'd2,
+    ADDR_BITS                = 6;
 
 //------------------------Local signal-------------------
     reg  [1:0]                    wstate = WRRESET;
@@ -100,6 +104,7 @@ localparam
     reg                           int_gie = 1'b0;
     reg  [1:0]                    int_ier = 2'b0;
     reg  [1:0]                    int_isr = 2'b0;
+    reg  [31:0]                   int_ap_return;
     reg  [63:0]                   int_din = 'b0;
 
 //------------------------Instantiation------------------
@@ -208,6 +213,9 @@ always @(posedge ACLK) begin
                 end
                 ADDR_ISR: begin
                     rdata <= int_isr;
+                end
+                ADDR_AP_RETURN_0: begin
+                    rdata <= int_ap_return[31:0];
                 end
                 ADDR_DIN_DATA_0: begin
                     rdata <= int_din[31:0];
@@ -318,6 +326,16 @@ always @(posedge ACLK) begin
             int_isr[1] <= 1'b1;
         else if (w_hs && waddr == ADDR_ISR && WSTRB[0])
             int_isr[1] <= int_isr[1] ^ WDATA[1]; // toggle on write
+    end
+end
+
+// int_ap_return
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_ap_return <= 0;
+    else if (ACLK_EN) begin
+        if (ap_done)
+            int_ap_return <= ap_return;
     end
 end
 

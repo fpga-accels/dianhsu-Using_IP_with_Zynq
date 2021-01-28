@@ -158,9 +158,9 @@ extern "C" {
 
 typedef float data_t;
 
-void relu_top(data_t din[3][3][3]);
+__attribute__((sdx_kernel("relu_top", 0))) int relu_top(data_t din[3][128][128]);
 # 2 "relu.cpp" 2
-__attribute__((sdx_kernel("relu_top", 0))) void relu_top(data_t din[3][128][128]) {_ssdm_SpecArrayDimSize(din, 3);
+__attribute__((sdx_kernel("relu_top", 0))) int relu_top(data_t din[3][128][128]) {_ssdm_SpecArrayDimSize(din, 3);
 #pragma HLS INTERFACE m_axi port=din offset=slave
 # 2 "relu.cpp"
 
@@ -170,20 +170,26 @@ __attribute__((sdx_kernel("relu_top", 0))) void relu_top(data_t din[3][128][128]
 #pragma HLS TOP name=relu_top
 # 2 "relu.cpp"
 
+ int cnt = 0;
  relu_top_label0: for (int i = 0; i < 3; ++i) {
-#pragma HLS PIPELINE off
-# 3 "relu.cpp"
-
-  relu_top_label1: for (int j = 0; j < 128; ++j) {
 #pragma HLS PIPELINE off
 # 4 "relu.cpp"
 
-   relu_top_label2: for (int k = 0; k < 128; ++k) {
+  relu_top_label1: for (int j = 0; j < 128; ++j) {
 #pragma HLS PIPELINE off
 # 5 "relu.cpp"
 
-    din[i][j][k] = din[i][j][k] > 0 ? din[i][j][k] : 0;
+   relu_top_label2: for (int k = 0; k < 128; ++k) {
+#pragma HLS PIPELINE off
+# 6 "relu.cpp"
+
+    if(din[i][j][k] > 0){
+     cnt++;
+    }else{
+     din[i][j][k] = 0;
+    }
    }
   }
  }
+ return cnt;
 }

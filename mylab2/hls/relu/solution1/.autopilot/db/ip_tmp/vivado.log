@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Jan 27 03:00:47 2021
+# Process ID: 13004
+# Current directory: C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/hls/relu/solution1/.autopilot/db/ip_tmp
+# Command line: vivado.exe -notrace -log vivado.log -mode batch -source run_vivado_gen_ip.tcl
+# Log file: C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/hls/relu/solution1/.autopilot/db/ip_tmp/vivado.log
+# Journal file: C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/hls/relu/solution1/.autopilot/db/ip_tmp\vivado.jou
+#-----------------------------------------------------------
+source run_vivado_gen_ip.tcl -notrace
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/hls/relu/solution1/.autopilot/db/ip_tmp'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'relu_top_ap_fcmp_0_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'relu_top_ap_fcmp_0_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'relu_top_ap_fcmp_0_no_dsp_32'...
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 27 03:00:56 2021...

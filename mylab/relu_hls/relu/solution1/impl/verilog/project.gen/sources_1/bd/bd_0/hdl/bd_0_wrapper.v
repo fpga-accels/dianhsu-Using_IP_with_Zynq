@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-//Date        : Tue Jan 26 14:09:36 2021
+//Date        : Wed Jan 27 01:33:46 2021
 //Host        : Windows10-508 running 64-bit major release  (build 9200)
 //Command     : generate_target bd_0_wrapper.bd
 //Design      : bd_0_wrapper
@@ -103,10 +103,10 @@ module bd_0_wrapper
   input m_axi_gmem_wready;
   output [3:0]m_axi_gmem_wstrb;
   output m_axi_gmem_wvalid;
-  input [4:0]s_axi_control_araddr;
+  input [5:0]s_axi_control_araddr;
   output s_axi_control_arready;
   input s_axi_control_arvalid;
-  input [4:0]s_axi_control_awaddr;
+  input [5:0]s_axi_control_awaddr;
   output s_axi_control_awready;
   input s_axi_control_awvalid;
   input s_axi_control_bready;
@@ -159,10 +159,10 @@ module bd_0_wrapper
   wire m_axi_gmem_wready;
   wire [3:0]m_axi_gmem_wstrb;
   wire m_axi_gmem_wvalid;
-  wire [4:0]s_axi_control_araddr;
+  wire [5:0]s_axi_control_araddr;
   wire s_axi_control_arready;
   wire s_axi_control_arvalid;
-  wire [4:0]s_axi_control_awaddr;
+  wire [5:0]s_axi_control_awaddr;
   wire s_axi_control_awready;
   wire s_axi_control_awvalid;
   wire s_axi_control_bready;

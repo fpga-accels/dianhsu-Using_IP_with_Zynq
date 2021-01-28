@@ -1,0 +1,483 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Jan 27 03:09:45 2021
+# Process ID: 17032
+# Current directory: C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.runs/relu_bd_relu_top_0_0_synth_1
+# Command line: vivado.exe -log relu_bd_relu_top_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source relu_bd_relu_top_0_0.tcl
+# Log file: C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.runs/relu_bd_relu_top_0_0_synth_1/relu_bd_relu_top_0_0.vds
+# Journal file: C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.runs/relu_bd_relu_top_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source relu_bd_relu_top_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/hls/relu/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+Command: synth_design -top relu_bd_relu_top_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 12444
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1183.434 ; gain = 57.086
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'relu_bd_relu_top_0_0' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ip/relu_bd_relu_top_0_0/synth/relu_bd_relu_top_0_0.v:59]
+INFO: [Synth 8-6157] synthesizing module 'relu_top' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 10'b0000000001 
+	Parameter ap_ST_fsm_state2 bound to: 10'b0000000010 
+	Parameter ap_ST_fsm_state3 bound to: 10'b0000000100 
+	Parameter ap_ST_fsm_state4 bound to: 10'b0000001000 
+	Parameter ap_ST_fsm_state5 bound to: 10'b0000010000 
+	Parameter ap_ST_fsm_state6 bound to: 10'b0000100000 
+	Parameter ap_ST_fsm_state7 bound to: 10'b0001000000 
+	Parameter ap_ST_fsm_state8 bound to: 10'b0010000000 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 10'b0100000000 
+	Parameter ap_ST_fsm_state20 bound to: 10'b1000000000 
+	Parameter C_S_AXI_CONTROL_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CONTROL_ADDR_WIDTH bound to: 7 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_GMEM_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_GMEM_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter C_M_AXI_GMEM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_GMEM_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_GMEM_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_GMEM_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_GMEM_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_GMEM_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_GMEM_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_M_AXI_GMEM_PROT_VALUE bound to: 3'b000 
+	Parameter C_M_AXI_GMEM_CACHE_VALUE bound to: 4'b0011 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CONTROL_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_M_AXI_GMEM_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_M_AXI_WSTRB_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'relu_top_control_s_axi' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_control_s_axi.v:6]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 7 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_AP_CTRL bound to: 7'b0000000 
+	Parameter ADDR_GIE bound to: 7'b0000100 
+	Parameter ADDR_IER bound to: 7'b0001000 
+	Parameter ADDR_ISR bound to: 7'b0001100 
+	Parameter ADDR_DIN_DATA_0 bound to: 7'b0010000 
+	Parameter ADDR_DIN_DATA_1 bound to: 7'b0010100 
+	Parameter ADDR_DIN_CTRL bound to: 7'b0011000 
+	Parameter ADDR_DOUT_DATA_0 bound to: 7'b0011100 
+	Parameter ADDR_DOUT_DATA_1 bound to: 7'b0100000 
+	Parameter ADDR_DOUT_CTRL bound to: 7'b0100100 
+	Parameter ADDR_POSITIVE_R_I_DATA_0 bound to: 7'b0101000 
+	Parameter ADDR_POSITIVE_R_I_CTRL bound to: 7'b0101100 
+	Parameter ADDR_POSITIVE_R_O_DATA_0 bound to: 7'b0110000 
+	Parameter ADDR_POSITIVE_R_O_CTRL bound to: 7'b0110100 
+	Parameter ADDR_NEGATIVE_I_DATA_0 bound to: 7'b0111000 
+	Parameter ADDR_NEGATIVE_I_CTRL bound to: 7'b0111100 
+	Parameter ADDR_NEGATIVE_O_DATA_0 bound to: 7'b1000000 
+	Parameter ADDR_NEGATIVE_O_CTRL bound to: 7'b1000100 
+	Parameter WRIDLE bound to: 2'b00 
+	Parameter WRDATA bound to: 2'b01 
+	Parameter WRRESP bound to: 2'b10 
+	Parameter WRRESET bound to: 2'b11 
+	Parameter RDIDLE bound to: 2'b00 
+	Parameter RDDATA bound to: 2'b01 
+	Parameter RDRESET bound to: 2'b10 
+	Parameter ADDR_BITS bound to: 7 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_control_s_axi.v:241]
+INFO: [Synth 8-6155] done synthesizing module 'relu_top_control_s_axi' (1#1) [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_control_s_axi.v:6]
+INFO: [Synth 8-6157] synthesizing module 'relu_top_gmem_m_axi' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:8]
+	Parameter CONSERVATIVE bound to: 0 - type: integer 
+	Parameter NUM_READ_OUTSTANDING bound to: 16 - type: integer 
+	Parameter NUM_WRITE_OUTSTANDING bound to: 16 - type: integer 
+	Parameter MAX_READ_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter MAX_WRITE_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter C_TARGET_ADDR bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 3'b000 
+	Parameter C_CACHE_VALUE bound to: 4'b0011 
+	Parameter USER_DW bound to: 32 - type: integer 
+	Parameter USER_AW bound to: 64 - type: integer 
+	Parameter USER_MAXREQS bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'relu_top_gmem_m_axi_write' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:1729]
+	Parameter NUM_WRITE_OUTSTANDING bound to: 16 - type: integer 
+	Parameter MAX_WRITE_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter C_TARGET_ADDR bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 3'b000 
+	Parameter C_CACHE_VALUE bound to: 4'b0011 
+	Parameter USER_DW bound to: 32 - type: integer 
+	Parameter USER_AW bound to: 64 - type: integer 
+	Parameter USER_MAXREQS bound to: 5 - type: integer 
+	Parameter USER_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter USER_DATA_BYTES bound to: 4 - type: integer 
+	Parameter USER_ADDR_ALIGN bound to: 2 - type: integer 
+	Parameter BUS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter BUS_DATA_BYTES bound to: 4 - type: integer 
+	Parameter BUS_ADDR_ALIGN bound to: 2 - type: integer 
+	Parameter NUM_WRITE_WIDTH bound to: 4 - type: integer 
+	Parameter TARGET_ADDR bound to: 0 - type: integer 
+	Parameter BOUNDARY_BEATS bound to: 10'b1111111111 
+INFO: [Synth 8-6157] synthesizing module 'relu_top_gmem_m_axi_fifo' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:418]
+	Parameter DATA_BITS bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 5 - type: integer 
+	Parameter DEPTH_BITS bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'relu_top_gmem_m_axi_fifo' (2#1) [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:418]
+INFO: [Synth 8-6157] synthesizing module 'relu_top_gmem_m_axi_reg_slice' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:314]
+	Parameter N bound to: 96 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-6155] done synthesizing module 'relu_top_gmem_m_axi_reg_slice' (3#1) [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:314]
+INFO: [Synth 8-6157] synthesizing module 'relu_top_gmem_m_axi_fifo__parameterized0' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:418]
+	Parameter DATA_BITS bound to: 96 - type: integer 
+	Parameter DEPTH bound to: 5 - type: integer 
+	Parameter DEPTH_BITS bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'relu_top_gmem_m_axi_fifo__parameterized0' (3#1) [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:418]
+INFO: [Synth 8-6157] synthesizing module 'relu_top_gmem_m_axi_buffer' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:529]
+	Parameter MEM_STYLE bound to: block - type: string 
+	Parameter DATA_WIDTH bound to: 36 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:582]
+INFO: [Synth 8-6155] done synthesizing module 'relu_top_gmem_m_axi_buffer' (4#1) [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:529]
+INFO: [Synth 8-6157] synthesizing module 'relu_top_gmem_m_axi_fifo__parameterized1' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:418]
+	Parameter DATA_BITS bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 15 - type: integer 
+	Parameter DEPTH_BITS bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'relu_top_gmem_m_axi_fifo__parameterized1' (4#1) [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:418]
+INFO: [Synth 8-6157] synthesizing module 'relu_top_gmem_m_axi_fifo__parameterized2' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:418]
+	Parameter DATA_BITS bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 5 - type: integer 
+	Parameter DEPTH_BITS bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'relu_top_gmem_m_axi_fifo__parameterized2' (4#1) [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:418]
+INFO: [Synth 8-6155] done synthesizing module 'relu_top_gmem_m_axi_write' (5#1) [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:1729]
+INFO: [Synth 8-6157] synthesizing module 'relu_top_gmem_m_axi_read' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:932]
+	Parameter NUM_READ_OUTSTANDING bound to: 16 - type: integer 
+	Parameter MAX_READ_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter C_TARGET_ADDR bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 3'b000 
+	Parameter C_CACHE_VALUE bound to: 4'b0011 
+	Parameter USER_DW bound to: 32 - type: integer 
+	Parameter USER_AW bound to: 64 - type: integer 
+	Parameter USER_MAXREQS bound to: 5 - type: integer 
+	Parameter USER_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter USER_DATA_BYTES bound to: 4 - type: integer 
+	Parameter USER_ADDR_ALIGN bound to: 2 - type: integer 
+	Parameter BUS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter BUS_DATA_BYTES bound to: 4 - type: integer 
+	Parameter BUS_ADDR_ALIGN bound to: 2 - type: integer 
+	Parameter NUM_READ_WIDTH bound to: 4 - type: integer 
+	Parameter TARGET_ADDR bound to: 0 - type: integer 
+	Parameter BOUNDARY_BEATS bound to: 10'b1111111111 
+INFO: [Synth 8-6157] synthesizing module 'relu_top_gmem_m_axi_buffer__parameterized0' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:529]
+	Parameter MEM_STYLE bound to: block - type: string 
+	Parameter DATA_WIDTH bound to: 35 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:582]
+INFO: [Synth 8-6155] done synthesizing module 'relu_top_gmem_m_axi_buffer__parameterized0' (5#1) [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:529]
+INFO: [Synth 8-6157] synthesizing module 'relu_top_gmem_m_axi_reg_slice__parameterized0' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:314]
+	Parameter N bound to: 34 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-6155] done synthesizing module 'relu_top_gmem_m_axi_reg_slice__parameterized0' (5#1) [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:314]
+INFO: [Synth 8-6155] done synthesizing module 'relu_top_gmem_m_axi_read' (6#1) [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:932]
+INFO: [Synth 8-6157] synthesizing module 'relu_top_gmem_m_axi_throttle' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:710]
+	Parameter USED_FIX bound to: 0 - type: integer 
+	Parameter FIX_VALUE bound to: 4 - type: integer 
+	Parameter ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+	Parameter USER_MAXREQS bound to: 16 - type: integer 
+	Parameter CONSERVATIVE bound to: 0 - type: integer 
+	Parameter AVERAGE_MODE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'relu_top_gmem_m_axi_throttle' (7#1) [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:710]
+INFO: [Synth 8-6155] done synthesizing module 'relu_top_gmem_m_axi' (8#1) [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_gmem_m_axi.v:8]
+INFO: [Synth 8-6157] synthesizing module 'relu_top_fcmp_32ns_32ns_1_2_no_dsp_1' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_fcmp_32ns_32ns_1_2_no_dsp_1.v:8]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+	Parameter AP_OEQ bound to: 5'b00001 
+	Parameter AP_OGT bound to: 5'b00010 
+	Parameter AP_OGE bound to: 5'b00011 
+	Parameter AP_OLT bound to: 5'b00100 
+	Parameter AP_OLE bound to: 5'b00101 
+	Parameter AP_ONE bound to: 5'b00110 
+	Parameter AP_UNO bound to: 5'b01000 
+	Parameter OP_EQ bound to: 8'b00010100 
+	Parameter OP_GT bound to: 8'b00100100 
+	Parameter OP_GE bound to: 8'b00110100 
+	Parameter OP_LT bound to: 8'b00001100 
+	Parameter OP_LE bound to: 8'b00011100 
+	Parameter OP_NE bound to: 8'b00101100 
+	Parameter OP_UO bound to: 8'b00000100 
+INFO: [Synth 8-6157] synthesizing module 'relu_top_ap_fcmp_0_no_dsp_32' [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/ip/relu_top_ap_fcmp_0_no_dsp_32.v:60]
+INFO: [Synth 8-6157] synthesizing module 'LUT1' [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:39137]
+INFO: [Synth 8-6155] done synthesizing module 'LUT1' (9#1) [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:39137]
+INFO: [Synth 8-6155] done synthesizing module 'relu_top_ap_fcmp_0_no_dsp_32' (21#1) [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/ip/relu_top_ap_fcmp_0_no_dsp_32.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'relu_top_fcmp_32ns_32ns_1_2_no_dsp_1' (22#1) [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top_fcmp_32ns_32ns_1_2_no_dsp_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'relu_top' (23#1) [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ipshared/b876/hdl/verilog/relu_top.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'relu_bd_relu_top_0_0' (24#1) [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ip/relu_bd_relu_top_0_0/synth/relu_bd_relu_top_0_0.v:59]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1315.906 ; gain = 189.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1315.906 ; gain = 189.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1315.906 ; gain = 189.559
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 1317.324 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 42 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ip/relu_bd_relu_top_0_0/constraints/relu_top_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.gen/sources_1/bd/relu_bd/ip/relu_bd_relu_top_0_0/constraints/relu_top_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.runs/relu_bd_relu_top_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.runs/relu_bd_relu_top_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1413.316 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 1415.359 ; gain = 2.043
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1415.359 ; gain = 289.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1415.359 ; gain = 289.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.runs/relu_bd_relu_top_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1415.359 ; gain = 289.012
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'relu_top_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'relu_top_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'relu_top_gmem_m_axi_reg_slice'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'relu_top_gmem_m_axi_reg_slice__parameterized0'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'relu_top_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'relu_top_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'relu_top_gmem_m_axi_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'relu_top_gmem_m_axi_reg_slice__parameterized0'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1415.359 ; gain = 289.012
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'inst/fcmp_32ns_32ns_1_2_no_dsp_1_U1/relu_top_ap_fcmp_0_no_dsp_32_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized5) to 'inst/fcmp_32ns_32ns_1_2_no_dsp_1_U1/relu_top_ap_fcmp_0_no_dsp_32_u/inst/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/fcmp_32ns_32ns_1_2_no_dsp_1_U1/relu_top_ap_fcmp_0_no_dsp_32_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized5) to 'inst/fcmp_32ns_32ns_1_2_no_dsp_1_U1/relu_top_ap_fcmp_0_no_dsp_32_u/inst/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/fcmp_32ns_32ns_1_2_no_dsp_1_U1/relu_top_ap_fcmp_0_no_dsp_32_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized5) to 'inst/fcmp_32ns_32ns_1_2_no_dsp_1_U1/relu_top_ap_fcmp_0_no_dsp_32_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/fcmp_32ns_32ns_1_2_no_dsp_1_U1/relu_top_ap_fcmp_0_no_dsp_32_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized5) to 'inst/fcmp_32ns_32ns_1_2_no_dsp_1_U1/relu_top_ap_fcmp_0_no_dsp_32_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1415.359 ; gain = 289.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1415.359 ; gain = 289.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1437.605 ; gain = 311.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/gmem_m_axi_U/bus_read/buff_rdata/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1447.645 ; gain = 321.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1447.645 ; gain = 321.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1447.645 ; gain = 321.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1447.645 ; gain = 321.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1447.645 ; gain = 321.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1447.645 ; gain = 321.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1447.645 ; gain = 321.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   150|
+|2     |LUT1     |    19|
+|3     |LUT2     |   226|
+|4     |LUT3     |   633|
+|5     |LUT4     |   265|
+|6     |LUT5     |   152|
+|7     |LUT6     |   282|
+|8     |MUXCY    |    31|
+|9     |MUXF7    |     2|
+|10    |RAMB18E1 |     2|
+|11    |SRL16E   |   164|
+|12    |FDRE     |  2210|
+|13    |FDSE     |     4|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1447.645 ; gain = 321.297
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 1447.645 ; gain = 221.844
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1447.645 ; gain = 321.297
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 1447.645 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 185 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1447.645 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 9 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 9 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+71 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1447.645 ; gain = 321.297
+INFO: [Common 17-1381] The checkpoint 'C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.runs/relu_bd_relu_top_0_0_synth_1/relu_bd_relu_top_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP relu_bd_relu_top_0_0, cache-ID = 3150b8bcaca71359
+INFO: [Coretcl 2-1174] Renamed 34 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab2/vivado/relu/relu.runs/relu_bd_relu_top_0_0_synth_1/relu_bd_relu_top_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file relu_bd_relu_top_0_0_utilization_synth.rpt -pb relu_bd_relu_top_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 27 03:10:36 2021...

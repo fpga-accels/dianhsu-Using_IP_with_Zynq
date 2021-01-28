@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-//Date        : Tue Jan 26 14:09:36 2021
+//Date        : Wed Jan 27 01:33:46 2021
 //Host        : Windows10-508 running 64-bit major release  (build 9200)
 //Command     : generate_target bd_0.bd
 //Design      : bd_0
@@ -104,10 +104,10 @@ module bd_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem " *) input m_axi_gmem_wready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem " *) output [3:0]m_axi_gmem_wstrb;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem " *) output m_axi_gmem_wvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_control, ADDR_WIDTH 32, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN bd_0_ap_clk_0, DATA_WIDTH 32, FREQ_HZ 100000000.0, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 0, HAS_LOCK 0, HAS_PROT 0, HAS_QOS 0, HAS_REGION 0, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 0, INSERT_VIP 0, MAX_BURST_LENGTH 1, NUM_READ_OUTSTANDING 1, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 1, NUM_WRITE_THREADS 1, PHASE 0.000, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0" *) input [4:0]s_axi_control_araddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_control, ADDR_WIDTH 32, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN bd_0_ap_clk_0, DATA_WIDTH 32, FREQ_HZ 100000000.0, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 0, HAS_LOCK 0, HAS_PROT 0, HAS_QOS 0, HAS_REGION 0, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 0, INSERT_VIP 0, MAX_BURST_LENGTH 1, NUM_READ_OUTSTANDING 1, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 1, NUM_WRITE_THREADS 1, PHASE 0.000, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0" *) input [5:0]s_axi_control_araddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) output s_axi_control_arready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) input s_axi_control_arvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) input [4:0]s_axi_control_awaddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) input [5:0]s_axi_control_awaddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) output s_axi_control_awready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) input s_axi_control_awvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control " *) input s_axi_control_bready;
@@ -160,10 +160,10 @@ module bd_0
   wire hls_inst_m_axi_gmem_WREADY;
   wire [3:0]hls_inst_m_axi_gmem_WSTRB;
   wire hls_inst_m_axi_gmem_WVALID;
-  wire [4:0]s_axi_control_0_1_ARADDR;
+  wire [5:0]s_axi_control_0_1_ARADDR;
   wire s_axi_control_0_1_ARREADY;
   wire s_axi_control_0_1_ARVALID;
-  wire [4:0]s_axi_control_0_1_AWADDR;
+  wire [5:0]s_axi_control_0_1_AWADDR;
   wire s_axi_control_0_1_AWREADY;
   wire s_axi_control_0_1_AWVALID;
   wire s_axi_control_0_1_BREADY;
@@ -216,9 +216,9 @@ module bd_0
   assign m_axi_gmem_wlast = hls_inst_m_axi_gmem_WLAST;
   assign m_axi_gmem_wstrb[3:0] = hls_inst_m_axi_gmem_WSTRB;
   assign m_axi_gmem_wvalid = hls_inst_m_axi_gmem_WVALID;
-  assign s_axi_control_0_1_ARADDR = s_axi_control_araddr[4:0];
+  assign s_axi_control_0_1_ARADDR = s_axi_control_araddr[5:0];
   assign s_axi_control_0_1_ARVALID = s_axi_control_arvalid;
-  assign s_axi_control_0_1_AWADDR = s_axi_control_awaddr[4:0];
+  assign s_axi_control_0_1_AWADDR = s_axi_control_awaddr[5:0];
   assign s_axi_control_0_1_AWVALID = s_axi_control_awvalid;
   assign s_axi_control_0_1_BREADY = s_axi_control_bready;
   assign s_axi_control_0_1_RREADY = s_axi_control_rready;

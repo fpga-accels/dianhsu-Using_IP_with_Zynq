@@ -1,0 +1,46 @@
+01:46:34 **** Build of project zed_hw2 ****
+buildplatform.bat 8316 zed_hw2  
+XSDB Server Channel: tcfchan#2
+Reading the platform  : "zed_hw2"
+ERROR: [Hsi 55-1594] Core relu_top of version 1.4 not found in repositories
+ERROR: [Hsi 55-1592] Current Software Design is not set
+ERROR: [Hsi 55-1592] Current Software Design is not set
+ERROR: [Hsi 55-1594] Core relu_top of version 1.4 not found in repositories
+ERROR: [Hsi 55-1592] Current Software Design is not set
+ERROR: [Hsi 55-1592] Current Software Design is not set
+ERROR: [Hsi 55-1594] Core relu_top of version 1.4 not found in repositories
+ERROR: [Hsi 55-1592] Current Software Design is not set
+ERROR: [Hsi 55-1592] Current Software Design is not set
+ERROR: [Hsi 55-1594] Core relu_top of version 1.4 not found in repositories
+ERROR: [Hsi 55-1594] Core relu_top of version 1.4 not found in repositories
+ERROR: [Hsi 55-1594] Core relu_top of version 1.4 not found in repositories
+Reading the platform  : "zed_hw2"
+ERROR: [Hsi 55-1594] Core relu_top of version 1.4 not found in repositories
+ERROR: [Hsi 55-1592] Current Software Design is not set
+ERROR: [Hsi 55-1592] Current Software Design is not set
+ERROR: [Hsi 55-1594] Core relu_top of version 1.4 not found in repositories
+ERROR: [Hsi 55-1592] Current Software Design is not set
+ERROR: [Hsi 55-1592] Current Software Design is not set
+ERROR: [Hsi 55-1594] Core relu_top of version 1.4 not found in repositories
+ERROR: [Hsi 55-1592] Current Software Design is not set
+ERROR: [Hsi 55-1592] Current Software Design is not set
+ERROR: [Hsi 55-1594] Core relu_top of version 1.4 not found in repositories
+ERROR: [Hsi 55-1594] Core relu_top of version 1.4 not found in repositories
+ERROR: [Hsi 55-1594] Core relu_top of version 1.4 not found in repositories
+No Platform exists with name:  zed_hw2
+    invoked from within
+"::tcf::eval -progress {apply {{msg} {puts $msg}}} {tcf_send_command tcfchan#0 xsdb eval s es {{platform active zed_hw2; platform generate }}}"
+    (procedure "::tcf::send_command" line 4)
+    invoked from within
+"tcf send_command $::xsdb::curchan xsdb eval s es [list "platform active $PLATFORM_NAME; platform generate $target"]"
+    invoked from within
+"if { $iswindows == 1 } {    
+
+    set XSDB_PORT [lindex $argv 0]
+    set PLATFORM_NAME [lindex $argv 1]
+    set arglen [llength $argv]
+    set lastind..."
+    (file "C:/Xilinx/Vitis/2020.2\scripts\vitis\util\buildplatform.tcl" line 11)
+
+01:46:40 Build Finished (took 6s.6ms)
+

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1611642416">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1611682860">
   <File Type="BITSTR-BMM" Name="relu_bd_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="relu_bd_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="relu_bd_wrapper_timing_summary_init.rpt"/>
@@ -121,7 +121,6 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="relu_bd_relu_top_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="relu_bd_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="relu_bd_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="relu_bd_relu_top_0_1"/>
 </GenRun>

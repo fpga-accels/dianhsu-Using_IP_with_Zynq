@@ -1,0 +1,44 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="relu_top" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="m_axi" value="" positionalBoolean="mode"/>
+                <option name="depth" value="64"/>
+                <option name="port" value="din" positionalBoolean="4"/>
+                <option name="offset" value="slave"/>
+            </pragma>
+        </directive>
+        <directive functionName="relu_top" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="m_axi" value="" positionalBoolean="mode"/>
+                <option name="depth" value="64"/>
+                <option name="port" value="dout" positionalBoolean="4"/>
+                <option name="offset" value="slave"/>
+            </pragma>
+        </directive>
+        <directive functionName="relu_top" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="return" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="relu_top" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="relu_top"/>
+            </pragma>
+        </directive>
+        <directive functionName="relu_top" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="positive" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="relu_top" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="negative" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

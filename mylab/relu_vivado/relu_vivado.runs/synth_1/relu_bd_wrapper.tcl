@@ -89,14 +89,14 @@ set_property ip_output_repo c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/re
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/hdl/relu_bd_wrapper.v
+read_verilog -library xil_defaultlib C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/hdl/relu_bd_wrapper.v
 add_files C:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.srcs/sources_1/bd/relu_bd/relu_bd.bd
-set_property used_in_implementation false [get_files -all c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/ip/relu_bd_relu_top_0_0/constraints/relu_top_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/ip/relu_bd_processing_system7_0_0/relu_bd_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/ip/relu_bd_auto_pc_0/relu_bd_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/ip/relu_bd_rst_ps7_0_100M_0/relu_bd_rst_ps7_0_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/ip/relu_bd_rst_ps7_0_100M_0/relu_bd_rst_ps7_0_100M_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/ip/relu_bd_rst_ps7_0_100M_0/relu_bd_rst_ps7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/ip/relu_bd_relu_top_0_1/constraints/relu_top_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/ip/relu_bd_auto_pc_0/relu_bd_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/ip/relu_bd_auto_pc_1/relu_bd_auto_pc_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/relu_bd_ooc.xdc]
 

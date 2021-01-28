@@ -4,14 +4,8 @@
 # Block Designs: bd/relu_bd/relu_bd.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==relu_bd || ORIG_REF_NAME==relu_bd} -quiet] -quiet
 
-# IP: bd/relu_bd/ip/relu_bd_relu_top_0_0/relu_bd_relu_top_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==relu_bd_relu_top_0_0 || ORIG_REF_NAME==relu_bd_relu_top_0_0} -quiet] -quiet
-
 # IP: bd/relu_bd/ip/relu_bd_processing_system7_0_0/relu_bd_processing_system7_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==relu_bd_processing_system7_0_0 || ORIG_REF_NAME==relu_bd_processing_system7_0_0} -quiet] -quiet
-
-# IP: bd/relu_bd/ip/relu_bd_auto_pc_0/relu_bd_auto_pc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==relu_bd_auto_pc_0 || ORIG_REF_NAME==relu_bd_auto_pc_0} -quiet] -quiet
 
 # IP: bd/relu_bd/ip/relu_bd_axi_mem_intercon_0/relu_bd_axi_mem_intercon_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==relu_bd_axi_mem_intercon_0 || ORIG_REF_NAME==relu_bd_axi_mem_intercon_0} -quiet] -quiet
@@ -19,10 +13,16 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==relu_bd_axi
 # IP: bd/relu_bd/ip/relu_bd_rst_ps7_0_100M_0/relu_bd_rst_ps7_0_100M_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==relu_bd_rst_ps7_0_100M_0 || ORIG_REF_NAME==relu_bd_rst_ps7_0_100M_0} -quiet] -quiet
 
-# IP: bd/relu_bd/ip/relu_bd_auto_pc_1/relu_bd_auto_pc_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==relu_bd_auto_pc_1 || ORIG_REF_NAME==relu_bd_auto_pc_1} -quiet] -quiet
-
 # IP: bd/relu_bd/ip/relu_bd_ps7_0_axi_periph_0/relu_bd_ps7_0_axi_periph_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==relu_bd_ps7_0_axi_periph_0 || ORIG_REF_NAME==relu_bd_ps7_0_axi_periph_0} -quiet] -quiet
+
+# IP: bd/relu_bd/ip/relu_bd_relu_top_0_1/relu_bd_relu_top_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==relu_bd_relu_top_0_1 || ORIG_REF_NAME==relu_bd_relu_top_0_1} -quiet] -quiet
+
+# IP: bd/relu_bd/ip/relu_bd_auto_pc_0/relu_bd_auto_pc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==relu_bd_auto_pc_0 || ORIG_REF_NAME==relu_bd_auto_pc_0} -quiet] -quiet
+
+# IP: bd/relu_bd/ip/relu_bd_auto_pc_1/relu_bd_auto_pc_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==relu_bd_auto_pc_1 || ORIG_REF_NAME==relu_bd_auto_pc_1} -quiet] -quiet
 
 # XDC: c:/Users/dianhsu/Desktop/Using_IP_with_Zynq/mylab/relu_vivado/relu_vivado.gen/sources_1/bd/relu_bd/relu_bd_ooc.xdc

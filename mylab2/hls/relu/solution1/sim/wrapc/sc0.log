@@ -1,0 +1,6 @@
+   Build using "C:/Xilinx/Vitis_HLS/2020.2/tps/win64/msys64/mingw64/bin/g++"
+   Compiling relu.cpp_pre.cpp.tb.cpp
+   Compiling test_relu.cpp_pre.cpp.tb.cpp
+   Compiling apatb_relu_top.cpp
+   Compiling apatb_relu_top_ir.ll
+   Generating cosim.tv.exe
